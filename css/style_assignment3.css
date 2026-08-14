@@ -165,7 +165,8 @@ nav a:hover{
 
 .host-card a,
 .host-btn,
-#themeBtn{
+#themeBtn,
+#generateBtn{
     display:inline-block;
 
     margin-top:15px;
@@ -190,7 +191,8 @@ nav a:hover{
 
 .host-card a:hover,
 .host-btn:hover,
-#themeBtn:hover{
+#themeBtn:hover,
+#generateBtn:hover{
     background:#E8DDF7;
 }
 
@@ -333,6 +335,232 @@ footer{
     background:#F9DCE3;
     text-align:center;
     padding:25px;
+}
+
+.random-book{
+    text-align:center;
+    padding:50px 50px 20px;
+}
+
+.random-book h1{
+    color:#6f5d86;
+    margin-bottom:10px;
+    font-size:2.2rem;
+}
+
+.random-book p{
+    max-width:600px;
+    margin:0 auto 20px;
+}
+
+#floatingBooks{
+    position:relative;
+    width:100%;
+    height:600px;
+    overflow:hidden;
+    transition: filter 0.5s ease;
+}
+
+#floatingBooks.blurred{
+    filter: blur(4px) brightness(0.6);
+}
+
+#floatingBooks canvas{
+    display:block;
+}
+
+.floating-book:hover{
+    transform:scale(1.1);
+}
+
+/* Overlay-Backdrop */
+.overlay-backdrop{
+    display:none;
+    position:fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:1000;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay-backdrop.active{
+    display:flex;
+}
+
+.book-display{
+    display:flex;
+    gap:30px;
+    align-items:center;
+    background:#fffaf6;
+    border-radius:20px;
+    padding:40px;
+    max-width:700px;
+    width:90%;
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
+    position:relative;
+}
+
+.book-display img{
+    width:220px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.book-info-text{
+    text-align:left;
+}
+
+.book-info-text h2{
+    color:#6f5d86;
+    margin-bottom:10px;
+}
+
+#closeOverlay{
+    position:absolute;
+    top:10px;
+    right:15px;
+    background:none;
+    border:none;
+    font-size:1.5rem;
+    cursor:pointer;
+}
+
+.contact-content{
+    display:flex;
+    gap:50px;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    padding:60px 50px 80px;
+}
+
+.contact-form-wrapper,
+.instagram-wrapper{
+    flex:1 1 400px;
+    max-width:500px;
+}
+
+.contact-form-wrapper h2,
+.instagram-wrapper h2{
+    color:#6f5d86;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+
+    background:#fffaf6;
+    border:2px solid #E8DDF7;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+.contact-form label{
+    font-weight:bold;
+    margin-top:10px;
+    color:#4a4a4a;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea,
+.contact-form select{
+    padding:10px 12px;
+    border:2px solid #E8DDF7;
+    border-radius:10px;
+    font-family:Georgia, sans-serif;
+    font-size:1rem;
+    background:#F6F0E8;
+    color:#4a4a4a;
+    resize:vertical;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form textarea:focus,
+.contact-form select:focus{
+    outline:none;
+    border-color:#c68ab5;
+}
+
+.role-select{
+    border:none;
+    margin-top:10px;
+    padding:0;
+}
+
+.role-select legend{
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.radio-label{
+    margin-right:20px;
+    font-weight:normal;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    cursor:pointer;
+}
+
+.contact-form button[type="submit"]{
+    margin-top:20px;
+    align-self:center;
+
+    background:#F9DCE3;
+    color:#4a4a4a;
+    border:2px solid #4a4a4a;
+    cursor:pointer;
+    padding:10px 25px;
+    border-radius:20px;
+    font-size:1rem;
+    font-family:Georgia, sans-serif;
+    transition:0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover{
+    background:#E8DDF7;
+}
+
+.instagram-wrapper{
+    text-align:center;
+}
+
+.instagram-wrapper a{
+    color:#6f5d86;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.instagram-wrapper a:hover{
+    text-decoration:underline;
+}
+
+.instagram-feed{
+    margin-top:20px;
+    background:#fffaf6;
+    border:2px solid #E8DDF7;
+    border-radius:15px;
+    padding:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+    min-height:300px;
+}
+
+.feed-placeholder{
+    color:#999;
+    padding:100px 20px;
+    font-style:italic;
+}
+
+@media(max-width:768px){
+    .contact-content{
+        flex-direction:column;
+        align-items:center;
+    }
 }
 
 @media(max-width:768px){
