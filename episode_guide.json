@@ -24,28 +24,56 @@
     "number": 143,
     "title": "BEHIND THE PAGES: The Seoul Season mit Patricia Bouslair",
     "description": "Things are getting Seoul-ful today! We’re hosting author Patricia Bouslair to talk about her debut, 'The Seoul Season', published by Moon Notes.",
-    "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/1fqJFI0aWjXvoLhO5c5icJ?utm_source=generator&theme=0&si=8f2e527886f84bad",
+    "spotifyId": "1fqJFI0aWjXvoLhO5c5icJ",
     "tags": ["Monthly Recap"]
   },
   {
     "number": 144,
     "title": "The Life of a Showgirl - book recommendations",
     "description": ".....",
-    "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/7bL61nihJOQJicS1kQ1jyx?utm_source=generator&theme=0&si=c392589156464dfa",
+    "spotifyId": "7bL61nihJOQJicS1kQ1jyx",
     "tags": ["...."]
   },
   {
     "number": 145,
     "title": "10 BEFORE THE END - Lonely Island",
     "description": ".....",
-    "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/3vQWuguMWfA8AtKs7r64kl?utm_source=generator&theme=0&si=cf7bea1af03d4900",
+    "spotifyId": "3vQWuguMWfA8AtKs7r64kl",
     "tags": ["..."]
   }, 
   {
     "number": 146,
     "title": "Film adaptions of books - Part III",
     "description": ".....",
-    "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/11mXsga4hSAlU4z5nq5M9U?utm_source=generator&theme=0&si=9ed3d6b208754f10", 
+    "spotifyId": "11mXsga4hSAlU4z5nq5M9U",
+    "tags": ["..."]
+  }, 
+  {
+    "number": 147,
+    "title": "A Very Specific Christmas Gift Guide",
+    "description": ".....",
+    "spotifyId": "3EIc2WUAXpNhg6b1u1SkzD",
+    "tags": ["..."]
+  }, 
+  {
+    "number": 148,
+    "title": "XXL Reading Month - October, November, December 2025",
+    "description": ".....",
+    "spotifyId": "5bPu0szdwKXvjPm1GeBxML",
+    "tags": ["..."]
+  }, 
+  {
+    "number": 149,
+    "title": "Our year in books 2025 - A look back at the books we’ve read",
+    "description": ".....",
+    "spotifyId": "31ubAkxCoE38qDwJT3rRSY",
+    "tags": ["..."]
+  },
+  {
+    "number": 150,
+    "title": "BEHIND THE PAGES: Purple Clouds with Mounia Jayawanth",
+    "description": ".....",
+    "spotifyId": "5tobFbtbCOeOnIP9Qd1Rc9",
     "tags": ["..."]
   }
 ]
