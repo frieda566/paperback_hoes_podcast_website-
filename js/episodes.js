@@ -79,4 +79,12 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
   applyFilters();
 });
 
+document.getElementById('filterToggleBtn').addEventListener('click', () => {
+  const tagFilter = document.getElementById('tagFilter');
+  const btn = document.getElementById('filterToggleBtn');
+
+  tagFilter.classList.toggle('show');
+  btn.classList.toggle('active');
+});
+
 loadEpisodes();
