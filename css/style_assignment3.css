@@ -745,3 +745,8 @@ body.dark-mode #filterToggleBtn.active{
     background:#E8DDF7;
     color:#2d2d2d;
 }
+
+#map {
+    height: 600px;
+    width: 100%;
+}
