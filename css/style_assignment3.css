@@ -163,10 +163,53 @@ nav a:hover{
     margin-bottom:15px;
 }
 
-.host-card a,
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #F9DCE3 0, #E8DDF7 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(111, 93, 134, .3) 0 2px 4px, rgba(111, 93, 134, .25) 0 7px 13px -3px, rgba(232, 221, 247, .6) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #4a4a4a;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Georgia, sans-serif;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.button-29:focus {
+  box-shadow: #6f5d86 0 0 0 1.5px inset, rgba(111, 93, 134, .3) 0 2px 4px, rgba(111, 93, 134, .25) 0 7px 13px -3px, #6f5d86 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(111, 93, 134, .3) 0 4px 8px, rgba(111, 93, 134, .25) 0 7px 13px -3px, #6f5d86 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #6f5d86 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
 .host-btn,
-#themeBtn,
-#generateBtn{
+#themeBtn{
     display:inline-block;
 
     margin-top:15px;
@@ -189,10 +232,8 @@ nav a:hover{
     transition:0.3s ease;
 }
 
-.host-card a:hover,
 .host-btn:hover,
-#themeBtn:hover,
-#generateBtn:hover{
+#themeBtn:hover{
     background:#E8DDF7;
 }
 
@@ -507,25 +548,6 @@ footer{
     cursor:pointer;
 }
 
-.contact-form button[type="submit"]{
-    margin-top:20px;
-    align-self:center;
-
-    background:#F9DCE3;
-    color:#4a4a4a;
-    border:2px solid #4a4a4a;
-    cursor:pointer;
-    padding:10px 25px;
-    border-radius:20px;
-    font-size:1rem;
-    font-family:Georgia, sans-serif;
-    transition:0.3s ease;
-}
-
-.contact-form button[type="submit"]:hover{
-    background:#E8DDF7;
-}
-
 .instagram-wrapper{
     text-align:center;
 }
@@ -612,22 +634,6 @@ footer{
     gap:10px;
     padding:0 60px;
     margin-bottom:25px;
-}
-
-#filterToggleBtn{
-    background:#F9DCE3;
-    color:#4a4a4a;
-
-    border:2px solid #4a4a4a;
-    cursor:pointer;
-
-    padding:10px 20px;
-    border-radius:20px;
-
-    font-size:1rem;
-    font-family:Georgia, sans-serif;
-
-    transition:0.3s ease;
 }
 
 #filterToggleBtn:hover{
