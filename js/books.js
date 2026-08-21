@@ -27,7 +27,7 @@ function initScene(){
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(width, height);
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.outputColorSpace = THREE.SRGBColorSpace;   // <- behebt die Dunkelheit
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
     container.appendChild(renderer.domElement);
 
     raycaster = new THREE.Raycaster();
@@ -37,73 +37,105 @@ function initScene(){
     renderer.domElement.addEventListener("click", onBookClick);
 }
 
+function scatterPositions(count, width, height, minDist){
+    const points = [];
+    const maxAttempts = 60;
+
+    for(let i = 0; i < count; i++){
+        let placed = false;
+
+        for(let attempt = 0; attempt < maxAttempts && !placed; attempt++){
+            const x = (Math.random() - 0.5) * width;
+            const y = (Math.random() - 0.5) * height;
+
+            let ok = true;
+            for(const p of points){
+                const dx = p.x - x, dy = p.y - y;
+                if(Math.sqrt(dx*dx + dy*dy) < minDist){ ok = false; break; }
+            }
+
+            if(ok){ points.push({x, y}); placed = true; }
+        }
+
+        if(!placed){
+            points.push({
+                x: (Math.random() - 0.5) * width,
+                y: (Math.random() - 0.5) * height
+            });
+        }
+    }
+    return points;
+}
+
 function createBooks(){
     const loader = new THREE.TextureLoader();
 
-    // Sichtbare Fläche bei z=0 berechnen, damit sich das Grid exakt am Kamerabild orientiert
     const distance = camera.position.z;
     const vFOV = THREE.MathUtils.degToRad(camera.fov);
     const visibleHeight = 2 * Math.tan(vFOV / 2) * distance;
     const visibleWidth = visibleHeight * camera.aspect;
 
-    const cols = Math.ceil(Math.sqrt(books.length * (visibleWidth / visibleHeight)));
-    const rows = Math.ceil(books.length / cols);
-    const cellWidth = visibleWidth / cols;
-    const cellHeight = visibleHeight / rows;
+    const margin = 0.85;
+    const usableWidth = visibleWidth * margin;
+    const usableHeight = visibleHeight * margin;
+
+    const bookWidth = 1.1;
+    const minDist = bookWidth * 0.75; // erlaubt leichtes Überlappen, aber nicht komplett übereinander
+
+    const positions = scatterPositions(books.length, usableWidth, usableHeight, minDist);
 
     books.forEach((book, i) => {
         const texture = loader.load("images_random_book/" + book.image);
-        texture.colorSpace = THREE.SRGBColorSpace;   // <- pro Textur nötig
+        texture.colorSpace = THREE.SRGBColorSpace;
 
-        const geometry = new THREE.PlaneGeometry(1.1, 1.6);
-        const material = new THREE.MeshBasicMaterial({
-            map: texture,
-            transparent: true,
-            side: THREE.DoubleSide,
-            opacity: 0   // startet unsichtbar für den Fly-in-Effekt
-        });
-        const mesh = new THREE.Mesh(geometry, material);
+        const coverMat = new THREE.MeshBasicMaterial({ map: texture, transparent: true });
+        const pageMat  = new THREE.MeshBasicMaterial({ color: 0xfaf6ee, transparent: true }); // helle Buchseiten
+        const spineMat = new THREE.MeshBasicMaterial({ color: 0xf0ebe0, transparent: true }); // etwas dunklere Seite/Rücken
 
-        const col = i % cols;
-        const row = Math.floor(i / cols);
-        const jitterX = (Math.random() - 0.5) * cellWidth * 0.5;
-        const jitterY = (Math.random() - 0.5) * cellHeight * 0.5;
+        const materials = [spineMat, spineMat, pageMat, pageMat, coverMat, spineMat];
 
-        const targetX = -visibleWidth / 2 + cellWidth * (col + 0.5) + jitterX;
-        const targetY = visibleHeight / 2 - cellHeight * (row + 0.5) + jitterY;
-        const targetZ = (Math.random() - 0.5) * 1.5;
+        const geometry = new THREE.BoxGeometry(bookWidth, 1.6, 0.18); // etwas dicker -> Seiten besser sichtbar
+        const mesh = new THREE.Mesh(geometry, materials);
+
+        const pos = positions[i];
+        const targetX = pos.x;
+        const targetY = pos.y;
+        const targetZ = (Math.random() - 0.5) * 0.6; // leichte Tiefenstreuung für Pile-Look
 
         mesh.userData = {
             book,
             baseX: targetX, baseY: targetY, baseZ: targetZ,
-            speedX: 0.2 + Math.random() * 0.3,
-            speedY: 0.2 + Math.random() * 0.3,
-            speedZ: 0.2 + Math.random() * 0.3,
+            speedX: 0.15 + Math.random() * 0.25,
+            speedY: 0.15 + Math.random() * 0.25,
             offsetX: Math.random() * Math.PI * 2,
             offsetY: Math.random() * Math.PI * 2,
-            offsetZ: Math.random() * Math.PI * 2,
-            baseRotY: (Math.random() - 0.5) * 0.3,
-            entryOffset: { x: 0, y: -3, z: -2 }   // Startversatz fürs Einfliegen
+            baseRotY: (Math.random() - 0.5) * 0.9,   // stärkere Y-Rotation -> manche Bücher fast "von der Seite"
+            baseRotZ: (Math.random() - 0.5) * 0.7,   // Z-Rotation -> schräg liegender, durcheinander wirkender Stapel
+            floatRangeX: 0.12,
+            floatRangeY: 0.1,
+            entryOffset: { x: 0, y: -3, z: -2 }
         };
 
         mesh.position.set(targetX, targetY - 3, targetZ - 2);
         mesh.rotation.y = mesh.userData.baseRotY;
+        mesh.rotation.z = mesh.userData.baseRotZ;
 
         scene.add(mesh);
         bookMeshes.push(mesh);
 
-        // Fly-in: leicht zeitversetzt pro Buch, damit sie nacheinander "reinfliegen"
         gsap.to(mesh.userData.entryOffset, {
             x: 0, y: 0, z: 0,
             duration: 1.2,
-            delay: i * 0.06,
+            delay: i * 0.05,
             ease: "power3.out"
         });
-        gsap.to(material, {
+        gsap.to(materials, {
             opacity: 1,
             duration: 1,
-            delay: i * 0.06
+            delay: i * 0.05
         });
+
+        materials.forEach(m => { m.opacity = 0; });
     });
 }
 
@@ -114,11 +146,13 @@ function animate(){
     bookMeshes.forEach(mesh => {
         const u = mesh.userData;
 
-        mesh.position.x = u.baseX + Math.sin(t * u.speedX + u.offsetX) * 0.25 + u.entryOffset.x;
-        mesh.position.y = u.baseY + Math.sin(t * u.speedY + u.offsetY) * 0.2 + u.entryOffset.y;
-        mesh.position.z = u.baseZ + Math.cos(t * u.speedZ + u.offsetZ) * 0.3 + u.entryOffset.z;
+        mesh.position.x = u.baseX + Math.sin(t * u.speedX + u.offsetX) * u.floatRangeX + u.entryOffset.x;
+        mesh.position.y = u.baseY + Math.sin(t * u.speedY + u.offsetY) * u.floatRangeY + u.entryOffset.y;
+        mesh.position.z = u.baseZ + u.entryOffset.z;
 
-        mesh.rotation.y = u.baseRotY + Math.sin(t * u.speedY + u.offsetY) * 0.06;
+        // sanftes Wackeln um die eigene Basis-Rotation, statt komplett neu zu rotieren
+        mesh.rotation.y = u.baseRotY + Math.sin(t * u.speedY + u.offsetY) * 0.05;
+        mesh.rotation.z = u.baseRotZ + Math.sin(t * u.speedX + u.offsetX) * 0.03;
     });
 
     renderer.render(scene, camera);
@@ -132,7 +166,6 @@ function onResize(){
     renderer.setSize(width, height);
 }
 
-// Bonus: Bücher werden klickbar, nicht nur der Generate-Button
 function onBookClick(event){
     const rect = renderer.domElement.getBoundingClientRect();
     mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
@@ -153,7 +186,7 @@ document.getElementById("generateBtn").addEventListener("click", () => {
 
 function showBookOverlay(randomBook){
     container.classList.add("blurred");
-    gsap.to(bookMeshes.map(m => m.material), { opacity: 0.25, duration: 0.5 });
+    gsap.to(bookMeshes.flatMap(m => m.material), { opacity: 0.25, duration: 0.5 });
 
     document.getElementById("overlayBackdrop").classList.add("active");
     document.getElementById("selectedBook").src = "images_random_book/" + randomBook.image;
@@ -180,5 +213,85 @@ function closeOverlay(){
         onComplete: () => document.getElementById("overlayBackdrop").classList.remove("active")
     });
     container.classList.remove("blurred");
-    gsap.to(bookMeshes.map(m => m.material), { opacity: 1, duration: 0.5 });
+    gsap.to(bookMeshes.flatMap(m => m.material), { opacity: 1, duration: 0.5 });
+
+
+async function Books() {
+  books = await fetch('book_guide.json').then(r => r.json());
+  renderTagFilter();
+  applyFilters();
+}
+
+function renderTagFilter() {
+  const allTags = [...new Set(books.flatMap(book => book.tags))].sort();
+  const filterDiv = document.getElementById('tagFilter');
+
+  filterDiv.innerHTML = `<button class="tag-btn active" data-tag="all">All</button>` +
+    allTags.map(tag => `<button class="tag-btn" data-tag="${tag}">${tag}</button>`).join('');
+
+  filterDiv.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('tag-btn')) return;
+
+    filterDiv.querySelectorAll('.tag-btn').forEach(btn => btn.classList.remove('active'));
+    e.target.classList.add('active');
+
+    activeTag = e.target.dataset.tag;
+    applyFilters();
+  });
+}
+
+function applyFilters() {
+  let filtered = episodes;
+
+  if (activeTag !== 'all') {
+    filtered = filtered.filter(ep => ep.tags.includes(activeTag));
+  }
+
+  if (searchTerm.trim() !== '') {
+    const term = searchTerm.toLowerCase();
+    filtered = filtered.filter(ep =>
+      ep.title.toLowerCase().includes(term) ||
+      ep.description.toLowerCase().includes(term) ||
+      ep.tags.some(tag => tag.toLowerCase().includes(term))
+    );
+  }
+
+  renderBooks(filtered);
+}
+
+function renderBooks(list) {
+  const grid = document.getElementById('BookGrid');
+
+  if (list.length === 0) {
+    grid.innerHTML = `<p class="no-results">No books found.</p>`;
+    return;
+  }
+
+  grid.innerHTML = list.map(book => `
+    <div class="card">
+      <div class="card-content">
+        <h3>${book.Book}</h3>
+        <p>${book.Author}</p>
+        <div class="tags">
+          ${book.tags.map(t => `<span class="tag-badge">${t}</span>`).join('')}
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  searchTerm = e.target.value;
+  applyFilters();
+});
+
+document.getElementById('filterToggleBtn').addEventListener('click', () => {
+  const tagFilter = document.getElementById('tagFilter');
+  const btn = document.getElementById('filterToggleBtn');
+
+  tagFilter.classList.toggle('show');
+  btn.classList.toggle('active');
+});
+
+loadEpisodes();
 }
