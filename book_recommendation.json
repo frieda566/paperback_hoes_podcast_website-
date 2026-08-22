@@ -110,5 +110,14 @@
     "image": "seoul.jpeg",
     "Tags": ["Romance"],
     "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/1fqJFI0aWjXvoLhO5c5icJ?utm_source=generator&theme=0&si=8f2e527886f84bad"
+  
+  },
+  {
+    "Book": "North And South",
+    "Author": "Elizabeth Gaskell",
+    "image": "northasouth.jpg",
+    "Tags": ["Classic"],
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/4tiE4qY6LY1gNNeCX5TkGf?utm_source=generator&theme=0&si=3aLLcBnmRt-0iu3qcmf0Ew"
+  
   }
 ]
