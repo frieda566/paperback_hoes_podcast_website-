@@ -1,5 +1,33 @@
 [
   {
+    "number": 136,
+    "title": "XXL Reading Month - April, May, June 2025",
+    "description": "We’re recapping our April-to-June reading months, sharing our biggest highlights, disappointments, and favorite reads along the way.",
+    "spotifyId": "2LOPwLC4f6ZMdNCf6kYTZH",
+    "tags": ["Monthly Recap"]
+  },
+  {
+    "number": 137,
+    "title": "Ali Hazelwood Booktalk - Part II ",
+    "description": "Part II of our Ali Hazelwood deep dive dives into her books, romance tropes, and plenty of hilarious tangents before ending with our personal ranking of her novels.",
+    "spotifyId": "08PiaTDUVxV5T3H2Ebfeon",
+    "tags": ["Romance"]
+  },
+  {
+    "number": 138,
+    "title": "How Well Do I Know My Books Challenge",
+    "description": "We’re putting our book knowledge to the test by randomly picking books from our shelves and answering questions about characters, covers, and settings, with plenty of unexpected spoilers along the way.",
+    "spotifyId": "2SxeQcVprA6bGeduw3kDNJ",
+    "tags": ["Fantasy"]
+  },
+  {
+    "number": 139,
+    "title": "New Releases 2025 Part II",
+    "description": "The second half of 2025 brings a fresh batch of highly anticipated releases, from Romantasy and sci-fi to queer reads and literary fiction, with plenty of books to add to our overflowing TBRs.",
+    "spotifyId": "1uKFKl4QEy7WBpS3fBoDDL",
+    "tags": ["New Releases", "Fiction"]
+  },
+  {
     "number": 140,
     "title": "If You Like This Movie, Read This Book",
     "description": "Our favorite book recommendations inspired by beloved films.",
@@ -30,51 +58,94 @@
   {
     "number": 144,
     "title": "The Life of a Showgirl - book recommendations",
-    "description": ".....",
+    "description": "Taylor Swift and books take center stage as we share our thoughts on her new songs and recommend reads inspired by The Life of a Showgirl.",
     "spotifyId": "7bL61nihJOQJicS1kQ1jyx",
-    "tags": ["...."]
+    "tags": ["Fiction"]
   },
   {
     "number": 145,
     "title": "10 BEFORE THE END - Lonely Island",
-    "description": ".....",
+    "description": "We’re imagining being stranded on a deserted island and choosing the ten books we’d want with us, from feminist nonfiction and high fantasy to nostalgic favorites and childhood comfort reads.",
     "spotifyId": "3vQWuguMWfA8AtKs7r64kl",
-    "tags": ["..."]
+    "tags": ["Fantasy"]
   }, 
   {
     "number": 146,
     "title": "Film adaptions of books - Part III",
-    "description": ".....",
+    "description": "We’re discussing book-to-screen adaptations, from chaotic and questionable choices to standout successes like A Good Girl’s Guide to Murder and Red, White & Royal Blue, plus upcoming adaptations we’re excited about.",
     "spotifyId": "11mXsga4hSAlU4z5nq5M9U",
-    "tags": ["..."]
+    "tags": ["Fiction", "Romance", "Horror"]
   }, 
   {
     "number": 147,
     "title": "A Very Specific Christmas Gift Guide",
-    "description": ".....",
+    "description": "We’re tackling your ultra-specific Christmas wish lists with gift ideas for everyone from true-crime-loving knitters to fanfiction enthusiasts.",
     "spotifyId": "3EIc2WUAXpNhg6b1u1SkzD",
     "tags": ["..."]
   }, 
   {
     "number": 148,
     "title": "XXL Reading Month - October, November, December 2025",
-    "description": ".....",
+    "description": "We’re recapping our final reading months of the year with honest opinions, mini-rants, and plenty of book love.",
     "spotifyId": "5bPu0szdwKXvjPm1GeBxML",
-    "tags": ["..."]
+    "tags": ["Monthly Recap", "Fiction"]
   }, 
   {
     "number": 149,
     "title": "Our year in books 2025 - A look back at the books we’ve read",
-    "description": ".....",
+    "description": "Let's look back on our BookTok reading year with genre favorites, special awards, and an honest comparison of our Top 5 and Flop 5 books.",
     "spotifyId": "31ubAkxCoE38qDwJT3rRSY",
-    "tags": ["..."]
+    "tags": ["Yearly Recap", "Memoir"]
   },
   {
     "number": 150,
     "title": "BEHIND THE PAGES: Purple Clouds with Mounia Jayawanth",
-    "description": ".....",
+    "description": "We’re joined by author Mounia Jayawanth for a spoiler-free conversation about her PURPLE CLOUDS trilogy, exploring feminist themes, diverse representation, and the swoony romances that bring the series to life.",
     "spotifyId": "5tobFbtbCOeOnIP9Qd1Rc9",
-    "tags": ["..."]
+    "tags": ["Author Talk"]
+  },
+  {
+    "number": 151,
+    "title": "New Releases 2026",
+    "description": "Let's look ahead into 2026 and we are sharing our absolute must-read books, from swoony Romantasy to thrilling and creepy page-turners.",
+    "spotifyId": "7CNjoBGk0xFxlCHQaJJxGu",
+    "tags": ["New Releases"]
+  },
+  {
+    "number": 152,
+    "title": "How to Diverser Reading",
+    "description": "After our last episode on the topic, we’re back with book recommendations featuring our favorite fantasy and sci-fi worlds by queer authors and authors of color, celebrating diverse representation and incredible worldbuilding.",
+    "spotifyId": "0rSQPvT2J5wvbVRroRAGz7",
+    "tags": ["Diversity"]
+  },
+  {
+    "number": 153,
+    "title": "How to DIVERS Reading-Part II",
+    "description": "Part 2 of our diverse reading series is here, featuring our favorite Romance, Horror, and Literary Fiction books by diverse authors, with a focus on authentic Own Voices representation.",
+    "spotifyId": "2cIJO0EIHTMEN2ZTKfBY2P",
+    "tags": ["Diversity"]
+  },
+  {
+    "number": 154,
+    "title": "XXL Reading Month - January, February , March 2026",
+    "description": "After a short break, we’re back to chat about our reading highlights from the past three months, covering everything from small-town romance and dark academia to YA crime.",
+    "spotifyId": "2VPAhWcRY93mxbFCHllkCA",
+    "tags": ["Romance", "Monthly Recap", "Fantasy", "Fiction", "Classics", "Movie Adaptations"]
+  },
+  {
+    "number": 155,
+    "title": "If you liked this tv show,READ THIS BOOK",
+    "description": "We share the perfect book recommendations based on your favorite binge-worthy TV shows, from reality TV and horror to sitcoms and romance.",
+    "spotifyId": "0Ch9KAE8AILzZSP476qrtH",
+    "tags": ["Horror"]
+  },
+  {
+    "number": 156,
+    "title": "Our Epilog…",
+    "description": "After five and a half years of book rants and deep dives, we’re saying goodbye by looking back on our favorite podcast highlights.",
+    "spotifyId": "4tiE4qY6LY1gNNeCX5TkGf",
+    "tags": ["Classics"]
   }
+  
 ]
   
