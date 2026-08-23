@@ -163,6 +163,8 @@ nav a:hover{
     margin-bottom:15px;
 }
 
+.host-btn,
+#themeBtn,
 .button-29 {
   align-items: center;
   appearance: none;
@@ -198,6 +200,8 @@ nav a:hover{
   box-shadow: #6f5d86 0 0 0 1.5px inset, rgba(111, 93, 134, .3) 0 2px 4px, rgba(111, 93, 134, .25) 0 7px 13px -3px, #6f5d86 0 -3px 0 inset;
 }
 
+.host-btn:hover,
+#themeBtn:hover,
 .button-29:hover {
   box-shadow: rgba(111, 93, 134, .3) 0 4px 8px, rgba(111, 93, 134, .25) 0 7px 13px -3px, #6f5d86 0 -3px 0 inset;
   transform: translateY(-2px);
@@ -206,35 +210,6 @@ nav a:hover{
 .button-29:active {
   box-shadow: #6f5d86 0 3px 7px inset;
   transform: translateY(2px);
-}
-
-.host-btn,
-#themeBtn{
-    display:inline-block;
-
-    margin-top:15px;
-
-    background:#F9DCE3;
-    color:#4a4a4a;
-
-    text-decoration:none;
-
-    border:2px solid #4a4a4a;
-    cursor:pointer;
-
-    padding:10px 20px;
-    border-radius:20px;
-
-    font-size:1rem;
-    font-family: Georgia, sans-serif;
-    line-height:1.2;
-
-    transition:0.3s ease;
-}
-
-.host-btn:hover,
-#themeBtn:hover{
-    background:#E8DDF7;
 }
 
 .hero{
@@ -380,13 +355,7 @@ footer{
 
 .random-book{
     text-align:center;
-    padding:50px 50px 20px;
-}
-
-.random-book h1{
-    color:#6f5d86;
-    margin-bottom:10px;
-    font-size:2.2rem;
+    padding:20px 50px 20px;
 }
 
 .random-book p{
@@ -712,6 +681,14 @@ footer{
 
 .card-grid{
     padding:0 60px 60px;
+}
+
+.card-book-cover {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 body.dark-mode .search-bar input{

@@ -1,22 +1,20 @@
-const themeBtn = document.getElementById("themeBtn");
+document.querySelectorAll('.host-card').forEach(card => {
 
-themeBtn.addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode");
-});
+    const button = card.querySelector('.favorite-btn');
+    const info = card.querySelector('.host-info');
 
-const buttons = document.querySelectorAll(".host-btn");
+    button.addEventListener('click', () => {
 
-buttons.forEach(button => {
-    button.addEventListener("click", function () {
-        const card = this.closest(".host-card");
-        const info = card.querySelector(".host-info");
+        info.classList.toggle('show');
 
-        info.classList.toggle("show");
+        if (info.classList.contains('show')) {
+            button.textContent = 'Hide Favorites';
+        } else {
+            button.textContent = 'Show Favorites';
+        }
 
-        this.textContent = info.classList.contains("show")
-            ? "Hide Favorites"
-            : "Show Favorites";
     });
+
 });
 
 

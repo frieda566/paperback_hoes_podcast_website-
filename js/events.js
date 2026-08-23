@@ -7,7 +7,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 const customIcon = L.icon({
   iconUrl: 'images/pin.png', 
-  iconSize: [40, 65],
+  iconSize: [30, 55],
   iconAnchor: [14, 38]
 });
 

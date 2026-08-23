@@ -67,6 +67,102 @@ function scatterPositions(count, width, height, minDist){
     return points;
 }
 
+function loadImageWithColor(src){
+    return new Promise((resolve) => {
+        const img = new Image();
+        img.crossOrigin = "anonymous";
+        img.onload = () => {
+            const sampleCanvas = document.createElement("canvas");
+            sampleCanvas.width = 20;
+            sampleCanvas.height = 20;
+            const ctx = sampleCanvas.getContext("2d");
+            ctx.drawImage(img, 0, 0, 20, 20);
+
+            let r = 0, g = 0, b = 0, count = 0;
+            try {
+                const data = ctx.getImageData(0, 0, 20, 20).data;
+                for(let i = 0; i < data.length; i += 4){
+                    r += data[i];
+                    g += data[i+1];
+                    b += data[i+2];
+                    count++;
+                }
+                r = Math.round(r / count);
+                g = Math.round(g / count);
+                b = Math.round(b / count);
+            } catch(e) {
+                r = 150; g = 130; b = 150;
+            }
+
+            resolve({ img, color: { r, g, b } });
+        };
+        img.onerror = () => resolve({ img: null, color: { r: 150, g: 130, b: 150 } });
+        img.src = src;
+    });
+}
+
+function extractDominantColor(img){
+    let r = 255, g = 255, b = 255; 
+
+    try {
+        const sampleCanvas = document.createElement("canvas");
+        sampleCanvas.width = 16;
+        sampleCanvas.height = 16;
+        const ctx = sampleCanvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, 16, 16);
+
+        const data = ctx.getImageData(0, 0, 16, 16).data;
+        let sr = 0, sg = 0, sb = 0, count = 0;
+        for(let i = 0; i < data.length; i += 4){
+            sr += data[i]; sg += data[i+1]; sb += data[i+2];
+            count++;
+        }
+        r = Math.round(sr / count);
+        g = Math.round(sg / count);
+        b = Math.round(sb / count);
+    } catch(e){
+        console.warn("Konnte Farbe nicht extrahieren (CORS?), nutze Fallback:", e.message);
+    }
+
+    return { r, g, b };
+}
+
+function createSpineTexture(color, title){
+    const canvas = document.createElement("canvas");
+    canvas.width = 64;
+    canvas.height = 512; 
+
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = `rgb(${color.r}, ${color.g}, ${color.b})`;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+    gradient.addColorStop(0, "rgba(0,0,0,0.15)");
+    gradient.addColorStop(0.5, "rgba(255,255,255,0.08)");
+    gradient.addColorStop(1, "rgba(0,0,0,0.15)");
+    ctx.fillStyle = gradient;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.save();
+    ctx.translate(canvas.width / 2, canvas.height / 2);
+    ctx.rotate(-Math.PI / 2);
+
+    const brightness = (color.r + color.g + color.b) / 3;
+    ctx.fillStyle = brightness > 150 ? "rgba(40,40,40,0.85)" : "rgba(255,255,255,0.9)";
+
+    ctx.font = "bold 34px Georgia, serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(title, 0, 0, canvas.height - 40);
+
+    ctx.restore();
+
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.colorSpace = THREE.SRGBColorSpace;
+    return texture;
+
+}
+
 function createBooks(){
     const loader = new THREE.TextureLoader();
 
@@ -75,67 +171,72 @@ function createBooks(){
     const visibleHeight = 2 * Math.tan(vFOV / 2) * distance;
     const visibleWidth = visibleHeight * camera.aspect;
 
-    const margin = 0.85;
+    const margin = 0.92;
     const usableWidth = visibleWidth * margin;
     const usableHeight = visibleHeight * margin;
 
-    const bookWidth = 1.1;
-    const minDist = bookWidth * 0.75; // erlaubt leichtes Überlappen, aber nicht komplett übereinander
+    const bookWidth = 1.0;
+    const minDist = bookWidth * 0.7; 
 
     const positions = scatterPositions(books.length, usableWidth, usableHeight, minDist);
 
     books.forEach((book, i) => {
-        const texture = loader.load("images_random_book/" + book.image);
-        texture.colorSpace = THREE.SRGBColorSpace;
+        loader.load(
+            "images_random_book/" + book.image,
+            (coverTexture) => {
+                coverTexture.colorSpace = THREE.SRGBColorSpace;
 
-        const coverMat = new THREE.MeshBasicMaterial({ map: texture, transparent: true });
-        const pageMat  = new THREE.MeshBasicMaterial({ color: 0xfaf6ee, transparent: true }); // helle Buchseiten
-        const spineMat = new THREE.MeshBasicMaterial({ color: 0xf0ebe0, transparent: true }); // etwas dunklere Seite/Rücken
+                const color = extractDominantColor(coverTexture.image);
+                const spineTexture = createSpineTexture(color, book.Book);
 
-        const materials = [spineMat, spineMat, pageMat, pageMat, coverMat, spineMat];
+                const coverMat = new THREE.MeshBasicMaterial({ map: coverTexture, transparent: true });
+                const spineMat = new THREE.MeshBasicMaterial({ map: spineTexture, transparent: true }); 
+                const pageMat  = new THREE.MeshBasicMaterial({ color: 0xfaf6ee, transparent: true });
+                const edgeMat  = new THREE.MeshBasicMaterial({ color: 0xf5f0e6, transparent: true });
 
-        const geometry = new THREE.BoxGeometry(bookWidth, 1.6, 0.18); // etwas dicker -> Seiten besser sichtbar
-        const mesh = new THREE.Mesh(geometry, materials);
+                const materials = [edgeMat, spineMat, pageMat, pageMat, coverMat, edgeMat];
 
-        const pos = positions[i];
-        const targetX = pos.x;
-        const targetY = pos.y;
-        const targetZ = (Math.random() - 0.5) * 0.6; // leichte Tiefenstreuung für Pile-Look
+                const geometry = new THREE.BoxGeometry(bookWidth, 1.45, 0.16);
+                const mesh = new THREE.Mesh(geometry, materials);
 
-        mesh.userData = {
-            book,
-            baseX: targetX, baseY: targetY, baseZ: targetZ,
-            speedX: 0.15 + Math.random() * 0.25,
-            speedY: 0.15 + Math.random() * 0.25,
-            offsetX: Math.random() * Math.PI * 2,
-            offsetY: Math.random() * Math.PI * 2,
-            baseRotY: (Math.random() - 0.5) * 0.9,   // stärkere Y-Rotation -> manche Bücher fast "von der Seite"
-            baseRotZ: (Math.random() - 0.5) * 0.7,   // Z-Rotation -> schräg liegender, durcheinander wirkender Stapel
-            floatRangeX: 0.12,
-            floatRangeY: 0.1,
-            entryOffset: { x: 0, y: -3, z: -2 }
-        };
+                const pos = positions[i];
+                const targetX = pos.x;
+                const targetY = pos.y;
+                const targetZ = 0;
 
-        mesh.position.set(targetX, targetY - 3, targetZ - 2);
-        mesh.rotation.y = mesh.userData.baseRotY;
-        mesh.rotation.z = mesh.userData.baseRotZ;
+                mesh.userData = {
+                    book,
+                    baseX: targetX, baseY: targetY, baseZ: targetZ,
+                    speedX: 0.15 + Math.random() * 0.2,
+                    speedY: 0.15 + Math.random() * 0.2,
+                    offsetX: Math.random() * Math.PI * 2,
+                    offsetY: Math.random() * Math.PI * 2,
+                    baseRotY: -0.15 + (Math.random() - 0.5) * 0.5,
+                    baseRotZ: (Math.random() - 0.5) * 0.35,
+                    floatRangeX: 0.07,
+                    floatRangeY: 0.05,
+                    entryOffset: { x: 0, y: -3, z: -2 }
+                };
 
-        scene.add(mesh);
-        bookMeshes.push(mesh);
+                mesh.position.set(targetX, targetY - 3, targetZ - 2);
+                mesh.rotation.y = mesh.userData.baseRotY;
+                mesh.rotation.z = mesh.userData.baseRotZ;
 
-        gsap.to(mesh.userData.entryOffset, {
-            x: 0, y: 0, z: 0,
-            duration: 1.2,
-            delay: i * 0.05,
-            ease: "power3.out"
-        });
-        gsap.to(materials, {
-            opacity: 1,
-            duration: 1,
-            delay: i * 0.05
-        });
+                scene.add(mesh);
+                bookMeshes.push(mesh);
 
-        materials.forEach(m => { m.opacity = 0; });
+                gsap.to(mesh.userData.entryOffset, {
+                    x: 0, y: 0, z: 0,
+                    duration: 1.2,
+                    delay: i * 0.05,
+                    ease: "power3.out"
+                });
+                gsap.to(materials, { opacity: 1, duration: 1, delay: i * 0.05 });
+                materials.forEach(m => { m.opacity = 0; });
+            },
+            undefined,
+            (err) => console.error("Fehler beim Laden von", book.image, err)
+        );
     });
 }
 
@@ -148,11 +249,10 @@ function animate(){
 
         mesh.position.x = u.baseX + Math.sin(t * u.speedX + u.offsetX) * u.floatRangeX + u.entryOffset.x;
         mesh.position.y = u.baseY + Math.sin(t * u.speedY + u.offsetY) * u.floatRangeY + u.entryOffset.y;
-        mesh.position.z = u.baseZ + u.entryOffset.z;
+        mesh.position.z = u.baseZ + u.entryOffset.z; 
 
-        // sanftes Wackeln um die eigene Basis-Rotation, statt komplett neu zu rotieren
-        mesh.rotation.y = u.baseRotY + Math.sin(t * u.speedY + u.offsetY) * 0.05;
-        mesh.rotation.z = u.baseRotZ + Math.sin(t * u.speedX + u.offsetX) * 0.03;
+        mesh.rotation.y = u.baseRotY + Math.sin(t * u.speedY + u.offsetY) * 0.04;
+        mesh.rotation.z = u.baseRotZ + Math.sin(t * u.speedX + u.offsetX) * 0.02;
     });
 
     renderer.render(scene, camera);
@@ -214,84 +314,4 @@ function closeOverlay(){
     });
     container.classList.remove("blurred");
     gsap.to(bookMeshes.flatMap(m => m.material), { opacity: 1, duration: 0.5 });
-
-
-async function Books() {
-  books = await fetch('book_guide.json').then(r => r.json());
-  renderTagFilter();
-  applyFilters();
-}
-
-function renderTagFilter() {
-  const allTags = [...new Set(books.flatMap(book => book.tags))].sort();
-  const filterDiv = document.getElementById('tagFilter');
-
-  filterDiv.innerHTML = `<button class="tag-btn active" data-tag="all">All</button>` +
-    allTags.map(tag => `<button class="tag-btn" data-tag="${tag}">${tag}</button>`).join('');
-
-  filterDiv.addEventListener('click', (e) => {
-    if (!e.target.classList.contains('tag-btn')) return;
-
-    filterDiv.querySelectorAll('.tag-btn').forEach(btn => btn.classList.remove('active'));
-    e.target.classList.add('active');
-
-    activeTag = e.target.dataset.tag;
-    applyFilters();
-  });
-}
-
-function applyFilters() {
-  let filtered = episodes;
-
-  if (activeTag !== 'all') {
-    filtered = filtered.filter(ep => ep.tags.includes(activeTag));
-  }
-
-  if (searchTerm.trim() !== '') {
-    const term = searchTerm.toLowerCase();
-    filtered = filtered.filter(ep =>
-      ep.title.toLowerCase().includes(term) ||
-      ep.description.toLowerCase().includes(term) ||
-      ep.tags.some(tag => tag.toLowerCase().includes(term))
-    );
-  }
-
-  renderBooks(filtered);
-}
-
-function renderBooks(list) {
-  const grid = document.getElementById('BookGrid');
-
-  if (list.length === 0) {
-    grid.innerHTML = `<p class="no-results">No books found.</p>`;
-    return;
-  }
-
-  grid.innerHTML = list.map(book => `
-    <div class="card">
-      <div class="card-content">
-        <h3>${book.Book}</h3>
-        <p>${book.Author}</p>
-        <div class="tags">
-          ${book.tags.map(t => `<span class="tag-badge">${t}</span>`).join('')}
-        </div>
-      </div>
-    </div>
-  `).join('');
-}
-
-document.getElementById('searchInput').addEventListener('input', (e) => {
-  searchTerm = e.target.value;
-  applyFilters();
-});
-
-document.getElementById('filterToggleBtn').addEventListener('click', () => {
-  const tagFilter = document.getElementById('tagFilter');
-  const btn = document.getElementById('filterToggleBtn');
-
-  tagFilter.classList.toggle('show');
-  btn.classList.toggle('active');
-});
-
-loadEpisodes();
 }
