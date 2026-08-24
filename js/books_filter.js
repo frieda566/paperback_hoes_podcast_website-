@@ -3,13 +3,13 @@ let activeTag = 'all';
 let searchTerm = '';
 
 async function loadBooks() {
-  books = await fetch('book_guide.json').then(r => r.json());
+  books = await fetch("book_recommendation.json").then(r => r.json());
   renderTagFilter();
   applyFilters();
 }
 
 function renderTagFilter() {
-  const allTags = [...new Set(books.flatMap(book => book.tags))].sort();
+  const allTags = [...new Set(books.flatMap(book => book.Tags))].sort();
   const filterDiv = document.getElementById('tagFilter');
 
   filterDiv.innerHTML = `<button class="tag-btn active" data-tag="all">All</button>` +
@@ -30,7 +30,7 @@ function applyFilters() {
   let filtered = books;
 
   if (activeTag !== 'all') {
-    filtered = filtered.filter(book => book.tags.includes(activeTag));
+    filtered = filtered.filter(book => book.Tags.includes(activeTag));
   }
 
   if (searchTerm.trim() !== '') {
@@ -58,7 +58,7 @@ function renderBooks(list) {
     <div class="card">
 
       <img 
-        src="images/${book.image}" 
+        src="images_random_book/${book.image}" 
         alt="${book.Book} cover"
         class="card-book-cover"
       >

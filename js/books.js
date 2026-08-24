@@ -5,7 +5,7 @@ let scene, camera, renderer, container;
 let bookMeshes = [];
 let raycaster, mouse;
 
-fetch("book_recommendation.json")
+fetch("random_book.json")
     .then(response => response.json())
     .then(data => {
         books = data;

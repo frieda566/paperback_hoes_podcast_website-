@@ -1,0 +1,123 @@
+[
+ {
+   "Book": "Persuasion",
+   "Author": "Jane Austen",
+   "image": "persuasion.png",
+   "Tags": ["Classic", "Romance"],
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/11mXsga4hSAlU4z5nq5M9U?utm_source=generator&si=3693a29e1eff44d2&theme=0"
+ },
+ {
+   "Book": "We Were Liars",
+   "Author": "E. Lockhart",
+   "image": "we_were_liars.png",
+   "Tags": ["Young Adult", "Mystery"],
+   "spotifyEmbedUrl": "11mXsga4hSAlU4z5nq5M9U"
+ },
+ {
+   "Book": "A Good Girl's Guide to Murder",
+   "Author": "Holly Jackson",
+   "image": "a_good_girls_guide_to_murder.png",
+   "Tags": ["Young Adult", "Mystery"],
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/11mXsga4hSAlU4z5nq5M9U?utm_source=generator&si=3693a29e1eff44d2&theme=0"
+ },
+ {
+   "Book": "Red, White & Royal Blue",
+   "Author": "Casey McQuinston",
+   "image": "red_white_royal_blue.png",
+   "Tags": ["Romance"],
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/11mXsga4hSAlU4z5nq5M9U?utm_source=generator&si=3693a29e1eff44d2&theme=0"
+ },
+ {
+   "Book": "In Your Dreams",
+   "Author": "Sarah Adams",
+   "image": "in_your_dreams.png",
+   "Tags": ["Fantasy"],
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0"
+ },
+ {
+   "Book": "Immortal Longings",
+   "Author": "Chloe Gong",
+   "image": "immortal_longings.png",
+   "Tags": ["Fantasy"],
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0"
+ }, 
+ {
+   "Book": "Blue Sisters",
+   "Author": "Coco Mellors",
+   "image": "blue_sisters.jpeg",
+    "Tags": ["Romance"],
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0"
+ }, 
+ {
+   "Book": "The Handmaid's Tale",
+   "Author": "Margaret Atwood",
+   "image": "the_handmaids_tale.jpeg",
+   "Tags": ["Dystopian", "Classic"],
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0"
+ }, 
+ {
+   "Book": "The Spinning Heart",
+   "Author": "Donal Ryan",
+   "image": "the_spinning_heart.jpeg",
+   "Tags": ["Literary Fiction"],
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0"
+ }, 
+ {
+   "Book": "Half City",
+   "Author": "Kate Golden",
+   "image": "half_city.jpeg",
+    "Tags": ["Historical Fiction"],
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0"
+ },
+ {
+   "Book": "Purple Clouds",
+   "Author": "Mounia Jayawanth",
+   "image": "purple_clouds_honeymoon.jpeg",
+    "Tags": ["Romance"],
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/5tobFbtbCOeOnIP9Qd1Rc9?utm_source=generator&theme=0&si=6c79d99d2ebe4cac" 
+  }, 
+  {
+    "Book": "The Stars Are Dying",
+    "Author": "Chloe C. Peñaranda",
+    "image": "the_stars_are_dying.jpeg",
+    "Tags": ["Science Fiction"],
+    "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/1Q7d9I4uUA1XZAJbyN22fx?utm_source=generator&theme=0&si=c1bfea568f854bdc" 
+  }, 
+  {
+    "Book": "From Blood and Ash",
+    "Author": "Jennifer L. Armentrout",
+    "image": "from_blood_and_ash.jpeg",
+    "Tags": ["Fantasy", "Romance"],
+    "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/1Q7d9I4uUA1XZAJbyN22fx?utm_source=generator&theme=0&si=c1bfea568f854bdc" 
+  }, 
+  {
+    "Book": "The Priority of the Orange Tree",
+    "Author": "Samantha Shannon",
+    "image": "the_priority_of_the_orange_tree.jpeg",
+    "Tags": ["Fantasy"],
+    "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/1Q7d9I4uUA1XZAJbyN22fx?utm_source=generator&theme=0&si=c1bfea568f854bdc" 
+  }, 
+  {
+    "Book": "Graceless Heart",
+    "Author": "Isabel Ibanez",
+    "image": "graceless_heart.jpeg",
+    "Tags": ["Romance"],
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/7CNjoBGk0xFxlCHQaJJxGu?utm_source=generator&theme=0&si=e9e763e671dc4f92"
+  }, 
+  {
+    "Book": "The Seoul Season",
+    "Author": "Patricia Bouslair",
+    "image": "seoul.jpeg",
+    "Tags": ["Romance"],
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/1fqJFI0aWjXvoLhO5c5icJ?utm_source=generator&theme=0&si=8f2e527886f84bad"
+  
+  },
+  {
+    "Book": "North And South",
+    "Author": "Elizabeth Gaskell",
+    "image": "northasouth.jpg",
+    "Tags": ["Classic"],
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/4tiE4qY6LY1gNNeCX5TkGf?utm_source=generator&theme=0&si=3aLLcBnmRt-0iu3qcmf0Ew"
+  
+  }
+]
