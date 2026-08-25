@@ -119,5 +119,93 @@
     "Tags": ["Classic"],
     "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/4tiE4qY6LY1gNNeCX5TkGf?utm_source=generator&theme=0&si=3aLLcBnmRt-0iu3qcmf0Ew"
   
+  },
+  {
+    "Book": "The Innvocations",
+    "Author": "Krystal Sutherland",
+    "image": "invocation-cover.jpg",
+    "Tags": ["Horror"],
+    "spotifyEmbedUrl":"https://open.spotify.com/episode/0Ch9KAE8AILzZSP476qrtH?si=V7bSE7X7QmSW3d__uN_rsg"
+  
+  },
+  {
+    "Book": "Americanah",
+    "Author": "Chimamanda Ngozi Adichie",
+    "image": "americanah-cover.jpg",
+    "Tags": ["Diversity"],
+    "spotifyEmbedUrl":"https://open.spotify.com/episode/2cIJO0EIHTMEN2ZTKfBY2P?si=_7Kl59sHREawFgXfm75igQ"
+  
+  },
+  {
+    "Book": "The Vanishing Half",
+    "Author": "Brit Bennett",
+    "image": "vanishing-cover.jpg",
+    "Tags": ["Diversity"],
+    "spotifyEmbedUrl":"https://open.spotify.com/episode/0rSQPvT2J5wvbVRroRAGz7?si=FyJa6W54SB629nDXEmAfEw"
+  
+  },
+  {
+    "Book": "Careless People: A Story of Where I Used To Work",
+    "Author": "Sarah Wynn-Williams",
+    "image": "careless-cover.jpg",
+    "Tags": ["Memoir"],
+    "spotifyEmbedUrl":"https://open.spotify.com/episode/31ubAkxCoE38qDwJT3rRSY?si=FQlAVzcBTZCjmAJ6HhfdNg"
+  
+  },
+  {
+    "Book": "We Could Be Rats",
+    "Author": "Emily Austin",
+    "image": "rats-cover.jpg",
+    "Tags": ["Fiction", "Montly Recap"],
+    "spotifyEmbedUrl":"https://open.spotify.com/episode/5bPu0szdwKXvjPm1GeBxML?si=hw_FcbTWTWWtFEj6oN38Ig"
+  
+  },
+  {
+    "Book": "Project Hail Mary",
+    "Author": "Andy Weir",
+    "image": "hail-cover.jpg",
+    "Tags": ["Gift Guide"],
+    "spotifyEmbedUrl":"https://open.spotify.com/episode/3EIc2WUAXpNhg6b1u1SkzD?si=qKF5sa8fT_S5OurkYc1d1A"
+  
+  },
+  {
+    "Book": "Twilight",
+    "Author": "Stephanie Meyer",
+    "image": "twilight-cover.jpg",
+    "Tags": ["Fantasy"],
+    "spotifyEmbedUrl":"https://open.spotify.com/episode/3vQWuguMWfA8AtKs7r64kl?si=sz7Jhn0LSBGRO2PbsvC4pQ"
+  
+  },
+  {
+    "Book": "Daisy Jones& The Six",
+    "Author": "Taylor Jenkins Reid",
+    "image": "daisy-cover.jpg",
+    "Tags": ["Fiction"],
+    "spotifyEmbedUrl":"https://open.spotify.com/episode/7bL61nihJOQJicS1kQ1jyx?si=LzkESnL3T664ENANDpIfwg"
+  
+  },
+  {
+    "Book": "The Familiar",
+    "Author": "Leigh Bardugo",
+    "image": "familiar-cover.jpg",
+    "Tags": ["Monthly Recap"],
+    "spotifyEmbedUrl":"https://open.spotify.com/episode/1L2dXxGiDwqfy2SEeNhaOF?si=UqIHy7iaQ1GJfeXLgFpfpg"
+  
+  },
+  {
+    "Book": "Katabasis",
+    "Author": "R. F. Kuang",
+    "image": "katabasis-cover.jpg",
+    "Tags": ["Fantasy"],
+    "spotifyEmbedUrl":"https://open.spotify.com/episode/0cV64gm0XC1V9WqXRkPX0o?si=Z7Dv8cNISrCzH3zLWnyiFA"
+  
+  },
+  {
+    "Book": "The Convenience Store by The Sea",
+    "Author": "Sonoko Machida",
+    "image": "sea-cover.jpg",
+    "Tags": ["Monthly Recap"],
+    "spotifyEmbedUrl":"https://open.spotify.com/episode/2LOPwLC4f6ZMdNCf6kYTZH?si=krjaQtKQRb-CBlBnk_7NKA"
+  
   }
 ]
