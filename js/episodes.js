@@ -4,6 +4,7 @@ let searchTerm = '';
 
 async function loadEpisodes() {
   episodes = await fetch('episode_guide.json').then(r => r.json());
+  episodes.sort((a, b) => b.number - a.number);
   renderTagFilter();
   applyFilters();
 }

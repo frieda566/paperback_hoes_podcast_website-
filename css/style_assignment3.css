@@ -207,6 +207,10 @@ nav a:hover{
   transform: translateY(-2px);
 }
 
+.host-btn{
+    margin-right: 12px;
+}
+
 .button-29:active {
   box-shadow: #6f5d86 0 3px 7px inset;
   transform: translateY(2px);
@@ -304,13 +308,13 @@ nav a:hover{
 }
 
 .card-grid{
-    display:flex;
-    flex-wrap:wrap;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap:20px;
+    align-items:stretch;
 }
 
 .card{
-    flex:1 1 250px;
     background:#fffaf6;
     border:2px solid #E8DDF7;
     border-radius:15px;
@@ -318,15 +322,31 @@ nav a:hover{
     box-shadow:0 4px 10px rgba(0,0,0,.08);
     display:flex;
     flex-direction:column;
+    height:100%;
+    overflow:hidden;
 }
 
 .card-content{
-    min-height:150px;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+}
+
+.card-content p{
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 
 .card iframe{
     width:100%;
+    max-width:100%;
+    display:block;
     margin-top:15px;
+    border:none;
 }
 
 .card:hover{

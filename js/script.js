@@ -12,12 +12,9 @@ buttons.forEach(button => {
 
         info.classList.toggle("show");
 
-        if (info.classList.contains("show")) {
-            this.textContent = "Hide " + this.dataset.name;
-        } else {
-            this.textContent = this.dataset.name;
-        }
-
+        this.textContent = info.classList.contains("show")
+            ? "Hide Favorites"
+            : "Show Favorites";
     });
 });
 
