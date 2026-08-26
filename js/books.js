@@ -171,12 +171,15 @@ function createBooks(){
     const visibleHeight = 2 * Math.tan(vFOV / 2) * distance;
     const visibleWidth = visibleHeight * camera.aspect;
 
-    const margin = 0.92;
-    const usableWidth = visibleWidth * margin;
-    const usableHeight = visibleHeight * margin;
-
     const bookWidth = 1.0;
-    const minDist = bookWidth * 0.7; 
+    const bookHeight = 1.45;
+
+    // Rand-Sicherheit: Buchgröße selbst von der nutzbaren Fläche abziehen
+    const margin = 0.92;
+    const usableWidth = (visibleWidth * margin) - bookWidth;
+    const usableHeight = (visibleHeight * margin) - bookHeight;
+
+    const minDist = bookWidth * 0.7;
 
     const positions = scatterPositions(books.length, usableWidth, usableHeight, minDist);
 
@@ -190,13 +193,13 @@ function createBooks(){
                 const spineTexture = createSpineTexture(color, book.Book);
 
                 const coverMat = new THREE.MeshBasicMaterial({ map: coverTexture, transparent: true });
-                const spineMat = new THREE.MeshBasicMaterial({ map: spineTexture, transparent: true }); 
+                const spineMat = new THREE.MeshBasicMaterial({ map: spineTexture, transparent: true });
                 const pageMat  = new THREE.MeshBasicMaterial({ color: 0xfaf6ee, transparent: true });
                 const edgeMat  = new THREE.MeshBasicMaterial({ color: 0xf5f0e6, transparent: true });
 
                 const materials = [edgeMat, spineMat, pageMat, pageMat, coverMat, edgeMat];
 
-                const geometry = new THREE.BoxGeometry(bookWidth, 1.45, 0.16);
+                const geometry = new THREE.BoxGeometry(bookWidth, bookHeight, 0.32);
                 const mesh = new THREE.Mesh(geometry, materials);
 
                 const pos = positions[i];
@@ -211,8 +214,8 @@ function createBooks(){
                     speedY: 0.15 + Math.random() * 0.2,
                     offsetX: Math.random() * Math.PI * 2,
                     offsetY: Math.random() * Math.PI * 2,
-                    baseRotY: -0.15 + (Math.random() - 0.5) * 0.5,
-                    baseRotZ: (Math.random() - 0.5) * 0.35,
+                    baseRotY: (Math.random() - 0.5) * 1.8,
+                    baseRotZ: (Math.random() - 0.5) * 0.6,
                     floatRangeX: 0.07,
                     floatRangeY: 0.05,
                     entryOffset: { x: 0, y: -3, z: -2 }
@@ -249,10 +252,10 @@ function animate(){
 
         mesh.position.x = u.baseX + Math.sin(t * u.speedX + u.offsetX) * u.floatRangeX + u.entryOffset.x;
         mesh.position.y = u.baseY + Math.sin(t * u.speedY + u.offsetY) * u.floatRangeY + u.entryOffset.y;
-        mesh.position.z = u.baseZ + u.entryOffset.z; 
+        mesh.position.z = u.baseZ + u.entryOffset.z;
 
-        mesh.rotation.y = u.baseRotY + Math.sin(t * u.speedY + u.offsetY) * 0.04;
-        mesh.rotation.z = u.baseRotZ + Math.sin(t * u.speedX + u.offsetX) * 0.02;
+        mesh.rotation.y = u.baseRotY + Math.sin(t * u.speedY + u.offsetY) * 0.08;
+        mesh.rotation.z = u.baseRotZ + Math.sin(t * u.speedX + u.offsetX) * 0.04;
     });
 
     renderer.render(scene, camera);
