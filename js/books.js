@@ -199,7 +199,7 @@ function createBooks(){
 
                 const materials = [edgeMat, spineMat, pageMat, pageMat, coverMat, edgeMat];
 
-                const geometry = new THREE.BoxGeometry(bookWidth, bookHeight, 0.32);
+                const geometry = new THREE.BoxGeometry(bookWidth, bookHeight, 0.24);
                 const mesh = new THREE.Mesh(geometry, materials);
 
                 const pos = positions[i];
