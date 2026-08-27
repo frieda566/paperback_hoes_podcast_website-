@@ -141,7 +141,7 @@
     "Author": "Brit Bennett",
     "image": "vanishing-cover.jpg",
     "Tags": ["Diversity"],
-    "spotifyEmbedUrl":"https://open.spotify.com/episode/0rSQPvT2J5wvbVRroRAGz7?si=FyJa6W54SB629nDXEmAfEw"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0rSQPvT2J5wvbVRroRAGz7?utm_source=generator&theme=0&si=9d7c5e711a23496e" 
   
   },
   {
@@ -177,7 +177,7 @@
   
   },
   {
-    "Book": "Daisy Jones& The Six",
+    "Book": "Daisy Jones & The Six",
     "Author": "Taylor Jenkins Reid",
     "image": "daisy-cover.jpg",
     "Tags": ["Fiction"],
