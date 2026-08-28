@@ -79,26 +79,27 @@ function renderBooks(list) {
     }
 
     grid.innerHTML = list.map(book => `
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img 
-                        src="images_random_book/${book.image}" 
-                        alt="${book.Book} cover"
-                        class="card-book-cover"
-                    >
-                </div>
-                <div class="flip-card-back">
-                    <h3>${book.Book}</h3>
-                    <p class="back-author">${book.Author}</p>
-                    <div class="tags">
-                        ${book.Tags.map(tag =>
-                            `<span class="tag-badge">${tag}</span>`
-                        ).join('')}
-                    </div>
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img 
+                    src="images_random_book/${book.image}" 
+                    alt="${book.Book} cover"
+                    class="card-book-cover"
+                >
+            </div>
+            <div class="flip-card-back">
+                <h3>${book.Book}</h3>
+                <p class="back-author">${book.Author}</p>
+                <div class="tags">
+                    ${book.Tags.map(tag =>
+                        `<span class="tag-badge">${tag}</span>`
+                    ).join('')}
                 </div>
             </div>
         </div>
+        <div class="flip-hint-arrow">↻</div>
+    </div>
     `).join('');
 
     document.querySelectorAll('.flip-card').forEach(card => {

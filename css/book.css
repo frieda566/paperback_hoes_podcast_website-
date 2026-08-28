@@ -123,21 +123,33 @@ body.dark-mode .scroll-hint{
 }
 
 .flip-card{
+    position:relative; /* nötig, damit der Pfeil sich daran orientiert */
     perspective: 1200px;
     aspect-ratio: 2 / 3;
     cursor:pointer;
+}
+
+.flip-hint-arrow{
+    position:absolute;
+    bottom:-20px;
+    right:-12px;
+    font-size:2rem;
+    color:#6f5d86;
+    pointer-events:none;
+    z-index:5;
+    transform: rotate(120deg);
 }
 
 .flip-card-inner{
     position:relative;
     width:100%;
     height:100%;
-    transition: transform 0.6s;
+    transition: transform 0.5s ease;
     transform-style: preserve-3d;
 }
 
 .flip-card:hover .flip-card-inner{
-    transform: scale(1.03);
+    transform: rotateY(-15deg);
 }
 
 .flip-card.flipped .flip-card-inner{
@@ -145,7 +157,7 @@ body.dark-mode .scroll-hint{
 }
 
 .flip-card.flipped:hover .flip-card-inner{
-    transform: rotateY(180deg) scale(1.03);
+    transform: rotateY(180deg);
 }
 
 .flip-card-front,
@@ -155,7 +167,7 @@ body.dark-mode .scroll-hint{
     backface-visibility: hidden;
     border-radius:12px;
     box-shadow:0 4px 10px rgba(0,0,0,.15);
-    overflow:hidden;
+    overflow:hidden; 
 }
 
 .flip-card-front{

@@ -39,31 +39,52 @@ function initScene(){
 
 function scatterPositions(count, width, height, minDist){
     const points = [];
-    const maxAttempts = 60;
 
-    for(let i = 0; i < count; i++){
-        let placed = false;
+    const aspect = width / height;
+    const cols = Math.ceil(Math.sqrt(count * aspect));
+    const rows = Math.ceil(count / cols);
 
-        for(let attempt = 0; attempt < maxAttempts && !placed; attempt++){
-            const x = (Math.random() - 0.5) * width;
-            const y = (Math.random() - 0.5) * height;
+    const cellWidth = width / cols;
+    const cellHeight = height / rows;
 
-            let ok = true;
+    const jitterX = cellWidth * 0.55;
+    const jitterY = cellHeight * 0.55;
+
+    const safeDist = Math.min(cellWidth, cellHeight) * 0.5;
+
+    let i = 0;
+    for(let row = 0; row < rows && i < count; row++){
+        const rowOffset = (row % 2 === 0) ? 0 : cellWidth * 0.5;
+
+        for(let col = 0; col < cols && i < count; col++){
+            const baseX = -width / 2 + cellWidth * (col + 0.5) + rowOffset;
+            const baseY = height / 2 - cellHeight * (row + 0.5);
+
+            let x = baseX + (Math.random() - 0.5) * jitterX;
+            let y = baseY + (Math.random() - 0.5) * jitterY;
+
             for(const p of points){
-                const dx = p.x - x, dy = p.y - y;
-                if(Math.sqrt(dx*dx + dy*dy) < minDist){ ok = false; break; }
+                const dx = x - p.x, dy = y - p.y;
+                const dist = Math.sqrt(dx*dx + dy*dy);
+
+                if(dist < safeDist && dist > 0.001){
+                    const push = (safeDist - dist) * 0.6;
+                    const nx = dx / dist, ny = dy / dist;
+                    x += nx * push;
+                    y += ny * push;
+                }
             }
 
-            if(ok){ points.push({x, y}); placed = true; }
-        }
-
-        if(!placed){
-            points.push({
-                x: (Math.random() - 0.5) * width,
-                y: (Math.random() - 0.5) * height
-            });
+            points.push({ x, y });
+            i++;
         }
     }
+
+    for(let j = points.length - 1; j > 0; j--){
+        const k = Math.floor(Math.random() * (j + 1));
+        [points[j], points[k]] = [points[k], points[j]];
+    }
+
     return points;
 }
 
@@ -163,6 +184,30 @@ function createSpineTexture(color, title){
 
 }
 
+function createPageTexture(){
+    const canvas = document.createElement("canvas");
+    canvas.width = 64;
+    canvas.height = 64;
+
+    const ctx = canvas.getContext("2d");
+
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.strokeStyle = "rgba(180,170,160,0.4)";
+    ctx.lineWidth = 1;
+    for(let i = 0; i < canvas.width; i += 4){
+        ctx.beginPath();
+        ctx.moveTo(i, 0);
+        ctx.lineTo(i, canvas.height);
+        ctx.stroke();
+    }
+
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.colorSpace = THREE.SRGBColorSpace;
+    return texture;
+}
+
 function createBooks(){
     const loader = new THREE.TextureLoader();
 
@@ -174,7 +219,6 @@ function createBooks(){
     const bookWidth = 1.0;
     const bookHeight = 1.45;
 
-    // Rand-Sicherheit: Buchgröße selbst von der nutzbaren Fläche abziehen
     const margin = 0.92;
     const usableWidth = (visibleWidth * margin) - bookWidth;
     const usableHeight = (visibleHeight * margin) - bookHeight;
@@ -194,8 +238,9 @@ function createBooks(){
 
                 const coverMat = new THREE.MeshBasicMaterial({ map: coverTexture, transparent: true });
                 const spineMat = new THREE.MeshBasicMaterial({ map: spineTexture, transparent: true });
-                const pageMat  = new THREE.MeshBasicMaterial({ color: 0xfaf6ee, transparent: true });
-                const edgeMat  = new THREE.MeshBasicMaterial({ color: 0xf5f0e6, transparent: true });
+                const pageTexture = createPageTexture(); 
+                const pageMat  = new THREE.MeshBasicMaterial({ map: pageTexture, transparent: true });
+                const edgeMat  = new THREE.MeshBasicMaterial({ map: pageTexture, transparent: true });
 
                 const materials = [edgeMat, spineMat, pageMat, pageMat, coverMat, edgeMat];
 
@@ -214,12 +259,12 @@ function createBooks(){
                     speedY: 0.15 + Math.random() * 0.2,
                     offsetX: Math.random() * Math.PI * 2,
                     offsetY: Math.random() * Math.PI * 2,
-                    baseRotY: (Math.random() - 0.5) * 1.8,
-                    baseRotZ: (Math.random() - 0.5) * 0.6,
+                    baseRotY: (Math.random() - 0.5) * 0.9,  
+                    baseRotZ: (Math.random() - 0.5) * 0.35,  
                     floatRangeX: 0.07,
                     floatRangeY: 0.05,
                     entryOffset: { x: 0, y: -3, z: -2 }
-                };
+            };
 
                 mesh.position.set(targetX, targetY - 3, targetZ - 2);
                 mesh.rotation.y = mesh.userData.baseRotY;
