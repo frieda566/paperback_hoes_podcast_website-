@@ -19,9 +19,10 @@ header{
     background:#F9DCE3;
     padding:20px 50px;
 
-    display:flex;
-    justify-content:space-between;
+    display:grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     align-items:center;
+    gap: 20px;
 }
 
 .logo{
@@ -30,6 +31,7 @@ header{
     gap:10px;
     font-size:1.5rem;
     font-weight:bold;
+    justify-self:start;
 }
 
 .logo img{
@@ -39,21 +41,42 @@ header{
 }
 
 body.dark-mode{
-    background:#2d2d2d;
+    background:#444;
     color:white;
 }
 
 body.dark-mode header{
-    background:#444;
+    background:#6f5d86;
+}
+
+body.dark-mode nav a{
+    color:white;
+}
+
+body.dark-mode nav a:hover{
+    color:#c68ab5;
 }
 
 body.dark-mode .about{
-    background:#2d2d2d;
+    background:#444;
+}
+
+body.dark-mode .about h1{
+    color:#c68ab5;
 }
 
 body.dark-mode .host-card{
     background:#444;
     color:white;
+}
+
+body.dark-mode .hosts h2{
+    color:#c68ab5;
+    margin-bottom:40px;
+}
+body.dark-mode .host-card h3{
+    color:#c68ab5;
+    margin-bottom:10px;
 }
 
 body.dark-mode footer{
@@ -63,6 +86,10 @@ body.dark-mode footer{
 body.dark-mode .card{
     background:#444;
     color:white;
+}
+
+nav{
+    justify-self:end;
 }
 
 nav ul{
@@ -179,6 +206,7 @@ nav a:hover{
   font-family: Georgia, sans-serif;
   height: 48px;
   justify-content: center;
+  justify-self: center;
   line-height: 1;
   list-style: none;
   overflow: hidden;
@@ -655,17 +683,6 @@ body.dark-mode .tag-badge{
 
 body.dark-mode .no-results{
     color:#aaa;
-}
-
-body.dark-mode #filterToggleBtn{
-    background:#555;
-    color:white;
-    border-color:#888;
-}
-
-body.dark-mode #filterToggleBtn.active{
-    background:#E8DDF7;
-    color:#2d2d2d;
 }
 
 #map {
