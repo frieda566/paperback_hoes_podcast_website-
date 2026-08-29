@@ -4,16 +4,14 @@
    "Author": "Jane Austen",
    "image": "persuasion.png",
    "Tags": ["Classic", "Romance"],
-   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/11mXsga4hSAlU4z5nq5M9U?utm_source=generator&si=3693a29e1eff44d2&theme=0",
-   "ratings": {"rachel": 4.5,"laureen": 3.5}
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/11mXsga4hSAlU4z5nq5M9U?utm_source=generator&si=3693a29e1eff44d2&theme=0"
  },
  {
    "Book": "We Were Liars",
    "Author": "E. Lockhart",
    "image": "we_were_liars.png",
    "Tags": ["Young Adult", "Mystery"],
-   "spotifyEmbedUrl": "11mXsga4hSAlU4z5nq5M9U", 
-   "ratings": {"rachel": 4.5,"laureen": 3.5}
+   "spotifyEmbedUrl": "11mXsga4hSAlU4z5nq5M9U"
  },
  {
    "Book": "A Good Girl's Guide to Murder",
