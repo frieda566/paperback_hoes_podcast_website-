@@ -49,6 +49,68 @@
     display:flex;
 }
 
+.host-ratings{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin:15px 0;
+}
+
+.host-rating{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.host-avatar{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.stars{
+    display:flex;
+    gap:2px;
+    font-size:1.2rem;
+    color:#c68ab5;
+    position:relative;
+}
+
+.stars .star-full::before{
+    content:"★";
+}
+
+.stars .star-half{
+    position:relative;
+    display:inline-block;
+}
+
+.stars .star-half::before{
+    content:"★";
+    color:#E8DDF7; 
+    position:absolute;
+}
+
+.stars .star-half::after{
+    content:"★";
+    color:#c68ab5;
+    position:absolute;
+    width:50%;
+    overflow:hidden;
+}
+
+.stars .star-empty::before{
+    content:"★";
+    color:#E8DDF7;
+}
+
+body.dark-mode .stars .star-half::before,
+body.dark-mode .stars .star-empty::before{
+    color:#666;
+}
+
 .book-display{
     display:flex;
     gap:30px;
@@ -123,7 +185,7 @@ body.dark-mode .scroll-hint{
 }
 
 .flip-card{
-    position:relative; /* nötig, damit der Pfeil sich daran orientiert */
+    position:relative; 
     perspective: 1200px;
     aspect-ratio: 2 / 3;
     cursor:pointer;

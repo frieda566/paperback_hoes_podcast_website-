@@ -42,30 +42,38 @@
 </header>
 
 <section class="random-book">
-<div id="floatingBooks"></div>
-</section>
+    <div id="floatingBooks"></div>
 
-<div class="overlay-backdrop" id="overlayBackdrop">
-  <div class="book-display" id="bookDisplay">
-    <button class="button-29" id="closeOverlay">✕</button>
-    <img id="selectedBook" src="" alt="Selected Book Cover">
-    <div class="book-info-text">
-      <h2 id="selectedTitle"></h2>
-      <p id="selectedAuthor"></p>
-      <iframe id="spotifyFrame" width="100%" height="152" frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-      </iframe>
+    <div class="overlay-backdrop" id="overlayBackdrop">
+        <div class="book-display" id="bookDisplay">
+            <button class="button-29" id="closeOverlay">✕</button>
+            <img id="selectedBook" src="" alt="Selected Book Cover">
+            <div class="book-info-text">
+                <h2 id="selectedTitle"></h2>
+                <p id="selectedAuthor"></p>
+                <div class="host-ratings">
+                    <div class="host-rating">
+                        <img src="images/Rachel.jpeg" alt="Rachel" class="host-avatar">
+                        <div class="stars" id="rachelStars"></div>
+                    </div>
+                    <div class="host-rating">
+                        <img src="images/laureen.jpeg" alt="Laureen" class="host-avatar">
+                        <div class="stars" id="laureenStars"></div>
+                    </div>
+                </div>
+                <iframe id="spotifyFrame" width="100%" height="152" frameborder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-<button class="button-29" id="generateBtn">Generate Random Book</button>
+    <button class="button-29" id="generateBtn">Generate Random Book</button>
 
-<div class="scroll-hint">
-    <span>Scroll for more</span>
-    <div class="scroll-arrow">↓</div>
-</div>
-
+    <div class="scroll-hint">
+        <span>Scroll for more</span>
+        <div class="scroll-arrow">↓</div>
+    </div>
 </section>
 
 <section class="about">

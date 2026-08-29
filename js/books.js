@@ -88,42 +88,8 @@ function scatterPositions(count, width, height, minDist){
     return points;
 }
 
-function loadImageWithColor(src){
-    return new Promise((resolve) => {
-        const img = new Image();
-        img.crossOrigin = "anonymous";
-        img.onload = () => {
-            const sampleCanvas = document.createElement("canvas");
-            sampleCanvas.width = 20;
-            sampleCanvas.height = 20;
-            const ctx = sampleCanvas.getContext("2d");
-            ctx.drawImage(img, 0, 0, 20, 20);
-
-            let r = 0, g = 0, b = 0, count = 0;
-            try {
-                const data = ctx.getImageData(0, 0, 20, 20).data;
-                for(let i = 0; i < data.length; i += 4){
-                    r += data[i];
-                    g += data[i+1];
-                    b += data[i+2];
-                    count++;
-                }
-                r = Math.round(r / count);
-                g = Math.round(g / count);
-                b = Math.round(b / count);
-            } catch(e) {
-                r = 150; g = 130; b = 150;
-            }
-
-            resolve({ img, color: { r, g, b } });
-        };
-        img.onerror = () => resolve({ img: null, color: { r: 150, g: 130, b: 150 } });
-        img.src = src;
-    });
-}
-
 function extractDominantColor(img){
-    let r = 255, g = 255, b = 255; 
+    let r = 255, g = 255, b = 255;
 
     try {
         const sampleCanvas = document.createElement("canvas");
@@ -151,7 +117,7 @@ function extractDominantColor(img){
 function createSpineTexture(color, title){
     const canvas = document.createElement("canvas");
     canvas.width = 64;
-    canvas.height = 512; 
+    canvas.height = 512;
 
     const ctx = canvas.getContext("2d");
     ctx.fillStyle = `rgb(${color.r}, ${color.g}, ${color.b})`;
@@ -181,7 +147,6 @@ function createSpineTexture(color, title){
     const texture = new THREE.CanvasTexture(canvas);
     texture.colorSpace = THREE.SRGBColorSpace;
     return texture;
-
 }
 
 function createPageTexture(){
@@ -206,6 +171,27 @@ function createPageTexture(){
     const texture = new THREE.CanvasTexture(canvas);
     texture.colorSpace = THREE.SRGBColorSpace;
     return texture;
+}
+
+function renderStars(rating){
+    if(rating === undefined || rating === null) return "";
+
+    let html = "";
+    const fullStars = Math.floor(rating);
+    const hasHalf = (rating % 1) >= 0.5;
+    const emptyStars = 5 - fullStars - (hasHalf ? 1 : 0);
+
+    for(let i = 0; i < fullStars; i++){
+        html += `<span class="star-full"></span>`;
+    }
+    if(hasHalf){
+        html += `<span class="star-half"></span>`;
+    }
+    for(let i = 0; i < emptyStars; i++){
+        html += `<span class="star-empty"></span>`;
+    }
+
+    return html;
 }
 
 function createBooks(){
@@ -238,7 +224,7 @@ function createBooks(){
 
                 const coverMat = new THREE.MeshBasicMaterial({ map: coverTexture, transparent: true });
                 const spineMat = new THREE.MeshBasicMaterial({ map: spineTexture, transparent: true });
-                const pageTexture = createPageTexture(); 
+                const pageTexture = createPageTexture();
                 const pageMat  = new THREE.MeshBasicMaterial({ map: pageTexture, transparent: true });
                 const edgeMat  = new THREE.MeshBasicMaterial({ map: pageTexture, transparent: true });
 
@@ -259,12 +245,12 @@ function createBooks(){
                     speedY: 0.15 + Math.random() * 0.2,
                     offsetX: Math.random() * Math.PI * 2,
                     offsetY: Math.random() * Math.PI * 2,
-                    baseRotY: (Math.random() - 0.5) * 0.9,  
-                    baseRotZ: (Math.random() - 0.5) * 0.35,  
+                    baseRotY: (Math.random() - 0.5) * 0.9,
+                    baseRotZ: (Math.random() - 0.5) * 0.35,
                     floatRangeX: 0.07,
                     floatRangeY: 0.05,
                     entryOffset: { x: 0, y: -3, z: -2 }
-            };
+                };
 
                 mesh.position.set(targetX, targetY - 3, targetZ - 2);
                 mesh.rotation.y = mesh.userData.baseRotY;
@@ -341,6 +327,14 @@ function showBookOverlay(randomBook){
     document.getElementById("selectedTitle").textContent = randomBook.Book;
     document.getElementById("selectedAuthor").textContent = randomBook.Author;
     document.getElementById("spotifyFrame").src = randomBook.spotifyEmbedUrl;
+
+    if(randomBook.ratings){
+        document.getElementById("rachelStars").innerHTML = renderStars(randomBook.ratings.rachel);
+        document.getElementById("laureenStars").innerHTML = renderStars(randomBook.ratings.laureen);
+    } else {
+        document.getElementById("rachelStars").innerHTML = "";
+        document.getElementById("laureenStars").innerHTML = "";
+    }
 
     gsap.fromTo("#bookDisplay",
         { scale: 0.7, opacity: 0 },
