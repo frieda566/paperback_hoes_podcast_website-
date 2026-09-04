@@ -35,6 +35,7 @@ header{
     font-weight:bold;
     justify-self:start;
     min-width:0;
+    grid-column:1;
 }
 
 .logo img{
@@ -47,7 +48,7 @@ header{
     display:flex;
     align-items:center;
     justify-self: end;
-    min-width:0;
+    grid-column:3;
 }
 
 body.dark-mode{
@@ -216,6 +217,7 @@ body.dark-mode .card{
   white-space: nowrap;
   will-change: box-shadow, transform;
   font-size: 18px;
+  grid-column: 2;
 }
 
 .button-29:focus {
@@ -546,6 +548,9 @@ footer{
 }
 
 nav{
+    justify-self:end;
+    grid-column:3;
+    min-width:0;
     background:#F9DCE3;
 }
 
@@ -553,6 +558,7 @@ nav ul{
     display:flex;
     flex-direction:row;
     align-items:center;
+    justify-content:flex-end;
     gap:35px;
     list-style:none; 
     padding: 0;
@@ -572,7 +578,7 @@ nav ul li a{
     font-size:1.1rem;
 }
 
-@media(max-width:1100px){
+@media(max-width:1300px){
     .contact-content{
         flex-direction:column;
         align-items:center;
@@ -583,9 +589,8 @@ nav ul li a{
     }
 
     nav{
-        position:absolute; 
-        top:100%;
-        left:0;
+        grid-column:1 / -1;
+        grid-row:2;
         width:100%;
         background:#F9DCE3;
         max-height:0;
