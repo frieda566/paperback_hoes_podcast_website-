@@ -35,6 +35,7 @@ function initScene(){
 
     window.addEventListener("resize", onResize);
     renderer.domElement.addEventListener("click", onBookClick);
+    renderer.domElement.addEventListener("mousemove", onBookHover);
 }
 
 function scatterPositions(count, width, height, minDist){
@@ -171,6 +172,41 @@ function createPageTexture(){
     const texture = new THREE.CanvasTexture(canvas);
     texture.colorSpace = THREE.SRGBColorSpace;
     return texture;
+}
+
+function onBookHover(event) {
+    const rect = renderer.domElement.getBoundingClientRect();
+
+    mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+    mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+
+    raycaster.setFromCamera(mouse, camera);
+
+    const intersects = raycaster.intersectObjects(bookMeshes);
+
+    bookMeshes.forEach(mesh => {
+        gsap.to(mesh.scale, {
+            x: 1,
+            y: 1,
+            z: 1,
+            duration: 0.2
+        });
+    });
+
+    if (intersects.length > 0) {
+        const hoveredBook = intersects[0].object;
+
+        renderer.domElement.style.cursor = "url(\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M4%202%20L4%2020%20L9%2016%20L12%2022%20L15%2020.5%20L12%2014.5%20L18%2014.5%20Z'%20fill='%23c68ab5'%20stroke='white'%20stroke-width='1'/%3E%3C/svg%3E\") 4 2, pointer";
+
+        gsap.to(hoveredBook.scale, {
+            x: 1.08,
+            y: 1.08,
+            z: 1.08,
+            duration: 0.2
+        });
+    } else {
+        renderer.domElement.style.cursor = "default";
+    }
 }
 
 function renderStars(rating){
