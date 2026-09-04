@@ -1,10 +1,31 @@
 let episodes = [];
 let activeTags = new Set();
 let searchTerm = '';
+let fuse;
 
 async function loadEpisodes() {
     episodes = await fetch('episode_guide.json').then(r => r.json());
     episodes.sort((a, b) => b.number - a.number);
+
+    fuse = new Fuse(episodes, {
+        keys: [
+            {
+                name: "title",
+                weight: 0.5
+            },
+            {
+                name: "description",
+                weight: 0.3
+            },
+            {
+                name: "tags",
+                weight: 0.2
+            }
+        ],
+        threshold: 0.35,
+        ignoreLocation: true,
+        minMatchCharLength: 2
+    });
     renderTagFilter();
     applyFilters();
 }
@@ -56,11 +77,16 @@ function applyFilters() {
     }
 
     if (searchTerm.trim() !== '') {
-        const term = searchTerm.toLowerCase();
+        const results = fuse.search(searchTerm);
+        filtered = results.map(result => result.item);
+    } else {
+        filtered = [...episodes]; 
+
+    }
+
+    if (activeTags.size > 0) {
         filtered = filtered.filter(ep =>
-            ep.title.toLowerCase().includes(term) ||
-            ep.description.toLowerCase().includes(term) ||
-            ep.tags.some(tag => tag.toLowerCase().includes(term))
+            ep.tags.some(tag => activeTags.has(tag))
         );
     }
 

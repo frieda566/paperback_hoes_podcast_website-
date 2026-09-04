@@ -1,19 +1,41 @@
-let books = [];
+let recommendationBooks = [];
+let fuse; 
 let activeTags = new Set(); 
 let searchTerm = '';
 
 async function loadBooks() {
     try {
-        books = await fetch("book_recommendation.json").then(r => r.json());
+        recommendationBooks = await fetch("book_recommendation.json").then(r => r.json());
+
+        fuse = new Fuse(recommendationBooks, {
+            keys: [
+                {
+                    name: "Book",
+                    weight: 0.5
+                },
+                {
+                    name: "Author",
+                    weight: 0.3
+                },
+                {
+                    name: "Tags",
+                    weight: 0.2
+                }
+            ],
+            threshold: 0.35,
+            ignoreLocation: true,
+            minMatchCharLength: 2
+        });
+
         renderTagFilter();
         applyFilters();
     } catch (err) {
-        console.error("Fehler beim Laden der Bücher:", err);
+        console.error("The books could not be loaded:", err);
     }
 }
 
 function renderTagFilter() {
-    const allTags = [...new Set(books.flatMap(book => book.Tags))].sort();
+    const allTags = [...new Set(recommendationBooks.flatMap(book => book.Tags))].sort();
     const filterDiv = document.getElementById('tagFilter');
 
     filterDiv.innerHTML = `<button class="tag-btn active" data-tag="all">All</button>` +
@@ -50,7 +72,7 @@ function renderTagFilter() {
 }
 
 function applyFilters() {
-    let filtered = books;
+    let filtered = recommendationBooks;
 
     if (activeTags.size > 0) {
         filtered = filtered.filter(book =>
@@ -59,11 +81,12 @@ function applyFilters() {
     }
 
     if (searchTerm.trim() !== '') {
-        const term = searchTerm.toLowerCase();
-        filtered = filtered.filter(book =>
-            book.Book.toLowerCase().includes(term) ||
-            book.Author.toLowerCase().includes(term) ||
-            book.Tags.some(tag => tag.toLowerCase().includes(term))
+        const results = fuse.search(searchTerm);
+
+        const searchResults = results.map(result => result.item);
+
+        filtered = searchResults.filter(book =>
+            filtered.includes(book)
         );
     }
 
