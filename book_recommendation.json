@@ -207,5 +207,20 @@
     "Tags": ["Monthly Recap"],
     "spotifyEmbedUrl":"https://open.spotify.com/episode/2LOPwLC4f6ZMdNCf6kYTZH?si=krjaQtKQRb-CBlBnk_7NKA"
   
+  },
+  {
+    "Book": "Six Crimson Cranes",
+    "Author": "Elizabeth Lim",
+    "image": "cranes.jpg",
+    "Tags": ["Fantasy"],
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0cV64gm0XC1V9WqXRkPX0o?si=Z7Dv8cNISrCzH3zLWnyiFA"
+  
+  },
+  {
+    "Book": "Little Women",
+    "Author": "Louisa May Alcott",
+    "image": "little.jpg",
+    "Tags": ["Classic"],
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0cV64gm0XC1V9WqXRkPX0o?si=Z7Dv8cNISrCzH3zLWnyiFA"
   }
 ]
