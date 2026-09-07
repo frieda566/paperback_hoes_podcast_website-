@@ -38,22 +38,3 @@ document.querySelectorAll('a, button, select, .card, .host-card').forEach(el => 
     el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
     el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
 });
-
-function handleFeedError(){
-    document.getElementById('instagramEmbed').style.display = 'none';
-    document.getElementById('feedPlaceholder').style.display = 'block';
-}
-window.addEventListener('load', () => {
-    setTimeout(() => {
-        const frame = document.getElementById('lightwidgetFrame');
-        let blocked = false;
-        try {
-            // If the iframe never loaded (many blockers just cancel the request)
-            if (!frame || frame.offsetHeight === 0) blocked = true;
-        } catch(e){
-            blocked = true;
-        }
-        if (blocked) handleFeedError();
-    }, 3000);
-});
-
