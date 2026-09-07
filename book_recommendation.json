@@ -4,112 +4,128 @@
    "Author": "Jane Austen",
    "image": "persuasion.png",
    "Tags": ["Classic", "Romance"],
-   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/11mXsga4hSAlU4z5nq5M9U?utm_source=generator&si=3693a29e1eff44d2&theme=0"
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/11mXsga4hSAlU4z5nq5M9U?utm_source=generator&si=3693a29e1eff44d2&theme=0", 
+   "ratings": {"rachel": 4.5,"laureen": 3.5}
  },
  {
    "Book": "We Were Liars",
    "Author": "E. Lockhart",
    "image": "we_were_liars.png",
    "Tags": ["Young Adult", "Mystery"],
-   "spotifyEmbedUrl": "11mXsga4hSAlU4z5nq5M9U"
+   "spotifyEmbedUrl": "11mXsga4hSAlU4z5nq5M9U", 
+   "ratings": {"rachel": 4.5,"laureen": 3.5}
  },
  {
    "Book": "A Good Girl's Guide to Murder",
    "Author": "Holly Jackson",
    "image": "a_good_girls_guide_to_murder.png",
    "Tags": ["Young Adult", "Mystery"],
-   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/11mXsga4hSAlU4z5nq5M9U?utm_source=generator&si=3693a29e1eff44d2&theme=0"
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/11mXsga4hSAlU4z5nq5M9U?utm_source=generator&si=3693a29e1eff44d2&theme=0", 
+   "ratings": {"rachel": 4,"laureen": 4.5}
  },
  {
    "Book": "Red, White & Royal Blue",
    "Author": "Casey McQuinston",
    "image": "red_white_royal_blue.png",
    "Tags": ["Romance"],
-   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/11mXsga4hSAlU4z5nq5M9U?utm_source=generator&si=3693a29e1eff44d2&theme=0"
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/11mXsga4hSAlU4z5nq5M9U?utm_source=generator&si=3693a29e1eff44d2&theme=0", 
+   "ratings": {"rachel": 5,"laureen": 5}
  },
  {
    "Book": "In Your Dreams",
    "Author": "Sarah Adams",
    "image": "in_your_dreams.png",
    "Tags": ["Fantasy"],
-   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0"
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0", 
+   "ratings": {"rachel": 3,"laureen": 3.5}
  },
  {
    "Book": "Immortal Longings",
    "Author": "Chloe Gong",
    "image": "immortal_longings.png",
    "Tags": ["Fantasy"],
-   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0"
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0", 
+   "ratings": {"rachel": 4,"laureen": 5}
  }, 
  {
    "Book": "Blue Sisters",
    "Author": "Coco Mellors",
    "image": "blue_sisters.jpeg",
     "Tags": ["Romance"],
-   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0"
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0", 
+   "ratings": {"rachel": 4,"laureen": 3}
  }, 
  {
    "Book": "The Handmaid's Tale",
    "Author": "Margaret Atwood",
    "image": "the_handmaids_tale.jpeg",
    "Tags": ["Dystopian", "Classic"],
-   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0"
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0", 
+   "ratings": {"rachel": 5,"laureen": 5}
  }, 
  {
    "Book": "The Spinning Heart",
    "Author": "Donal Ryan",
    "image": "the_spinning_heart.jpeg",
    "Tags": ["Literary Fiction"],
-   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0"
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0", 
+   "ratings": {"rachel": 4.5}
  }, 
  {
    "Book": "Half City",
    "Author": "Kate Golden",
    "image": "half_city.jpeg",
     "Tags": ["Historical Fiction"],
-   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0"
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0", 
+   "ratings": {"rachel": 5}
  },
  {
    "Book": "Purple Clouds",
    "Author": "Mounia Jayawanth",
    "image": "purple_clouds_honeymoon.jpeg",
     "Tags": ["Romance"],
-   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/5tobFbtbCOeOnIP9Qd1Rc9?utm_source=generator&theme=0&si=6c79d99d2ebe4cac" 
+   "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/5tobFbtbCOeOnIP9Qd1Rc9?utm_source=generator&theme=0&si=6c79d99d2ebe4cac", 
+   "ratings": {"rachel": 4.5,"laureen": 5} 
   }, 
   {
     "Book": "The Stars Are Dying",
     "Author": "Chloe C. Peñaranda",
     "image": "the_stars_are_dying.jpeg",
     "Tags": ["Science Fiction"],
-    "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/1Q7d9I4uUA1XZAJbyN22fx?utm_source=generator&theme=0&si=c1bfea568f854bdc" 
+    "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/1Q7d9I4uUA1XZAJbyN22fx?utm_source=generator&theme=0&si=c1bfea568f854bdc", 
+    "ratings": {"laureen": 3.5}
   }, 
   {
     "Book": "From Blood and Ash",
     "Author": "Jennifer L. Armentrout",
     "image": "from_blood_and_ash.jpeg",
     "Tags": ["Fantasy", "Romance"],
-    "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/1Q7d9I4uUA1XZAJbyN22fx?utm_source=generator&theme=0&si=c1bfea568f854bdc" 
+    "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/1Q7d9I4uUA1XZAJbyN22fx?utm_source=generator&theme=0&si=c1bfea568f854bdc", 
+    "ratings": {"rachel": 2.5,"laureen": 3.5}
   }, 
   {
     "Book": "The Priority of the Orange Tree",
     "Author": "Samantha Shannon",
     "image": "the_priority_of_the_orange_tree.jpeg",
     "Tags": ["Fantasy"],
-    "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/1Q7d9I4uUA1XZAJbyN22fx?utm_source=generator&theme=0&si=c1bfea568f854bdc" 
+    "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/1Q7d9I4uUA1XZAJbyN22fx?utm_source=generator&theme=0&si=c1bfea568f854bdc", 
+    "ratings": {"rachel": 4.5}
   }, 
   {
     "Book": "Graceless Heart",
     "Author": "Isabel Ibanez",
     "image": "graceless_heart.jpeg",
     "Tags": ["Romance"],
-    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/7CNjoBGk0xFxlCHQaJJxGu?utm_source=generator&theme=0&si=e9e763e671dc4f92"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/7CNjoBGk0xFxlCHQaJJxGu?utm_source=generator&theme=0&si=e9e763e671dc4f92", 
+    "ratings": {"laureen": 3}
   }, 
   {
     "Book": "The Seoul Season",
     "Author": "Patricia Bouslair",
     "image": "seoul.jpeg",
     "Tags": ["Romance"],
-    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/1fqJFI0aWjXvoLhO5c5icJ?utm_source=generator&theme=0&si=8f2e527886f84bad"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/1fqJFI0aWjXvoLhO5c5icJ?utm_source=generator&theme=0&si=8f2e527886f84bad", 
+    "ratings": {"rachel": 4.5,"laureen": 3.5}
   
   },
   {
@@ -117,7 +133,8 @@
     "Author": "Elizabeth Gaskell",
     "image": "northasouth.jpg",
     "Tags": ["Classic"],
-    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/4tiE4qY6LY1gNNeCX5TkGf?utm_source=generator&theme=0&si=3aLLcBnmRt-0iu3qcmf0Ew"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/4tiE4qY6LY1gNNeCX5TkGf?utm_source=generator&theme=0&si=3aLLcBnmRt-0iu3qcmf0Ew", 
+    "ratings": {"laureen": 3.5}
   
   },
   {
@@ -125,7 +142,8 @@
     "Author": "Krystal Sutherland",
     "image": "invocation-cover.jpg",
     "Tags": ["Horror"],
-    "spotifyEmbedUrl":"https://open.spotify.com/episode/0Ch9KAE8AILzZSP476qrtH?si=V7bSE7X7QmSW3d__uN_rsg"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0Ch9KAE8AILzZSP476qrtH?si=V7bSE7X7QmSW3d__uN_rsg", 
+    "ratings": {"rachel": 4.5}
   
   },
   {
@@ -133,7 +151,8 @@
     "Author": "Chimamanda Ngozi Adichie",
     "image": "americanah-cover.jpg",
     "Tags": ["Diversity"],
-    "spotifyEmbedUrl":"https://open.spotify.com/episode/2cIJO0EIHTMEN2ZTKfBY2P?si=_7Kl59sHREawFgXfm75igQ"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/2cIJO0EIHTMEN2ZTKfBY2P?si=_7Kl59sHREawFgXfm75igQ", 
+    "ratings": {"rachel": 4.5}
   
   },
   {
@@ -141,7 +160,8 @@
     "Author": "Brit Bennett",
     "image": "vanishing-cover.jpg",
     "Tags": ["Diversity"],
-    "spotifyEmbedUrl":"https://open.spotify.com/episode/0rSQPvT2J5wvbVRroRAGz7?si=FyJa6W54SB629nDXEmAfEw"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0rSQPvT2J5wvbVRroRAGz7?utm_source=generator&theme=0&si=9d7c5e711a23496e", 
+    "ratings": {"rachel": 4,"laureen": 5} 
   
   },
   {
@@ -149,7 +169,8 @@
     "Author": "Sarah Wynn-Williams",
     "image": "careless-cover.jpg",
     "Tags": ["Memoir"],
-    "spotifyEmbedUrl":"https://open.spotify.com/episode/31ubAkxCoE38qDwJT3rRSY?si=FQlAVzcBTZCjmAJ6HhfdNg"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/31ubAkxCoE38qDwJT3rRSY?si=FQlAVzcBTZCjmAJ6HhfdNg", 
+   "ratings": {"rachel": 4.5}
   
   },
   {
@@ -157,7 +178,8 @@
     "Author": "Emily Austin",
     "image": "rats-cover.jpg",
     "Tags": ["Fiction", "Montly Recap"],
-    "spotifyEmbedUrl":"https://open.spotify.com/episode/5bPu0szdwKXvjPm1GeBxML?si=hw_FcbTWTWWtFEj6oN38Ig"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/5bPu0szdwKXvjPm1GeBxML?si=hw_FcbTWTWWtFEj6oN38Ig", 
+    "ratings": {"rachel": 5}
   
   },
   {
@@ -165,23 +187,25 @@
     "Author": "Andy Weir",
     "image": "hail-cover.jpg",
     "Tags": ["Gift Guide"],
-    "spotifyEmbedUrl":"https://open.spotify.com/episode/3EIc2WUAXpNhg6b1u1SkzD?si=qKF5sa8fT_S5OurkYc1d1A"
-  
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/3EIc2WUAXpNhg6b1u1SkzD?si=qKF5sa8fT_S5OurkYc1d1A", 
+    "ratings": {"rachel": 4.5,"laureen": 3.5}
   },
   {
     "Book": "Twilight",
     "Author": "Stephanie Meyer",
     "image": "twilight-cover.jpg",
     "Tags": ["Fantasy"],
-    "spotifyEmbedUrl":"https://open.spotify.com/episode/3vQWuguMWfA8AtKs7r64kl?si=sz7Jhn0LSBGRO2PbsvC4pQ"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/3vQWuguMWfA8AtKs7r64kl?si=sz7Jhn0LSBGRO2PbsvC4pQ", 
+    "ratings": {"rachel": 5,"laureen": 5}
   
   },
   {
-    "Book": "Daisy Jones& The Six",
+    "Book": "Daisy Jones & The Six",
     "Author": "Taylor Jenkins Reid",
     "image": "daisy-cover.jpg",
     "Tags": ["Fiction"],
-    "spotifyEmbedUrl":"https://open.spotify.com/episode/7bL61nihJOQJicS1kQ1jyx?si=LzkESnL3T664ENANDpIfwg"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/7bL61nihJOQJicS1kQ1jyx?si=LzkESnL3T664ENANDpIfwg", 
+    "ratings": {"rachel": 4,"laureen": 4.5}
   
   },
   {
@@ -189,7 +213,8 @@
     "Author": "Leigh Bardugo",
     "image": "familiar-cover.jpg",
     "Tags": ["Monthly Recap"],
-    "spotifyEmbedUrl":"https://open.spotify.com/episode/1L2dXxGiDwqfy2SEeNhaOF?si=UqIHy7iaQ1GJfeXLgFpfpg"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/1L2dXxGiDwqfy2SEeNhaOF?si=UqIHy7iaQ1GJfeXLgFpfpg", 
+    "ratings": {"rachel": 3,"laureen": 4.5}
   
   },
   {
@@ -197,7 +222,8 @@
     "Author": "R. F. Kuang",
     "image": "katabasis-cover.jpg",
     "Tags": ["Fantasy"],
-    "spotifyEmbedUrl":"https://open.spotify.com/episode/0cV64gm0XC1V9WqXRkPX0o?si=Z7Dv8cNISrCzH3zLWnyiFA"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0cV64gm0XC1V9WqXRkPX0o?si=Z7Dv8cNISrCzH3zLWnyiFA", 
+    "ratings": {"rachel": 4.5}
   
   },
   {
@@ -205,7 +231,8 @@
     "Author": "Sonoko Machida",
     "image": "sea-cover.jpg",
     "Tags": ["Monthly Recap"],
-    "spotifyEmbedUrl":"https://open.spotify.com/episode/2LOPwLC4f6ZMdNCf6kYTZH?si=krjaQtKQRb-CBlBnk_7NKA"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/2LOPwLC4f6ZMdNCf6kYTZH?si=krjaQtKQRb-CBlBnk_7NKA", 
+    "ratings": {"rachel": 4.5,"laureen": 5}
   
   },
   {
@@ -213,7 +240,8 @@
     "Author": "Elizabeth Lim",
     "image": "cranes.jpg",
     "Tags": ["Fantasy"],
-    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0cV64gm0XC1V9WqXRkPX0o?si=Z7Dv8cNISrCzH3zLWnyiFA"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0cV64gm0XC1V9WqXRkPX0o?si=Z7Dv8cNISrCzH3zLWnyiFA", 
+    "ratings": {"laureen": 4.5}
   
   },
   {
@@ -221,6 +249,8 @@
     "Author": "Louisa May Alcott",
     "image": "little.jpg",
     "Tags": ["Classic"],
-    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0cV64gm0XC1V9WqXRkPX0o?si=Z7Dv8cNISrCzH3zLWnyiFA"
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0cV64gm0XC1V9WqXRkPX0o?si=Z7Dv8cNISrCzH3zLWnyiFA", 
+    "ratings": {"rachel": 4.5, "laureen":4.5}
+  
   }
 ]

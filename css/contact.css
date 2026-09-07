@@ -130,9 +130,8 @@
     text-align:center;
 }
 
-.feed-placeholder{
-    color:#999;
-    padding:100px 20px;
-    font-style:italic;
+.feed-placeholder-img{
+    display:none;
+    width:100%;
+    border-radius:10px;
 }
-

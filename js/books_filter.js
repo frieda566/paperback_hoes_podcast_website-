@@ -3,6 +3,27 @@ let fuse;
 let activeTags = new Set(); 
 let searchTerm = '';
 
+function renderStars(rating){
+    if(rating === undefined || rating === null) return "";
+
+    let html = "";
+    const fullStars = Math.floor(rating);
+    const hasHalf = (rating % 1) >= 0.5;
+    const emptyStars = 5 - fullStars - (hasHalf ? 1 : 0);
+
+    for(let i = 0; i < fullStars; i++){
+        html += `<span class="star-full"></span>`;
+    }
+    if(hasHalf){
+        html += `<span class="star-half"></span>`;
+    }
+    for(let i = 0; i < emptyStars; i++){
+        html += `<span class="star-empty"></span>`;
+    }
+
+    return html;
+}
+
 async function loadBooks() {
     try {
         recommendationBooks = await fetch("book_recommendation.json").then(r => r.json());
@@ -119,6 +140,18 @@ function renderBooks(list) {
                         `<span class="tag-badge">${tag}</span>`
                     ).join('')}
                 </div>
+                ${book.ratings ? `
+                <div class="host-ratings card-ratings">
+                    <div class="host-rating">
+                        <img src="images/rachel.jpeg" alt="Rachel" class="host-avatar">
+                        <div class="stars">${renderStars(book.ratings.rachel)}</div>
+                    </div>
+                    <div class="host-rating">
+                        <img src="images/laureen.jpeg" alt="Laureen" class="host-avatar">
+                        <div class="stars">${renderStars(book.ratings.laureen)}</div>
+                    </div>
+                </div>
+                ` : ''}
             </div>
         </div>
         <div class="flip-hint-arrow">↻</div>
