@@ -69,7 +69,7 @@
    "image": "the_spinning_heart.jpeg",
    "Tags": ["Literary Fiction"],
    "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0", 
-   "ratings": {"rachel": 4.5}
+   "ratings": {"rachel": 4.5, "laureen": 4}
  }, 
  {
    "Book": "Half City",
@@ -77,7 +77,7 @@
    "image": "half_city.jpeg",
     "Tags": ["Historical Fiction"],
    "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/2VPAhWcRY93mxbFCHllkCA?utm_source=generator&si=3e798201a0b24cc3&theme=0", 
-   "ratings": {"rachel": 5}
+   "ratings": {"rachel": 5, "laureen":3.5}
  },
  {
    "Book": "Purple Clouds",
@@ -93,7 +93,7 @@
     "image": "the_stars_are_dying.jpeg",
     "Tags": ["Science Fiction"],
     "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/1Q7d9I4uUA1XZAJbyN22fx?utm_source=generator&theme=0&si=c1bfea568f854bdc", 
-    "ratings": {"laureen": 3.5}
+    "ratings": {"rachel":2.5,"laureen": 3.5}
   }, 
   {
     "Book": "From Blood and Ash",
@@ -109,7 +109,7 @@
     "image": "the_priority_of_the_orange_tree.jpeg",
     "Tags": ["Fantasy"],
     "spotifyEmbedUrl": "https://open.spotify.com/embed/episode/1Q7d9I4uUA1XZAJbyN22fx?utm_source=generator&theme=0&si=c1bfea568f854bdc", 
-    "ratings": {"rachel": 4.5}
+    "ratings": {"rachel": 4.5, "laureen":3.5}
   }, 
   {
     "Book": "Graceless Heart",
@@ -117,7 +117,7 @@
     "image": "graceless_heart.jpeg",
     "Tags": ["Romance"],
     "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/7CNjoBGk0xFxlCHQaJJxGu?utm_source=generator&theme=0&si=e9e763e671dc4f92", 
-    "ratings": {"laureen": 3}
+    "ratings": {"rachel":2.5,"laureen": 3}
   }, 
   {
     "Book": "The Seoul Season",
@@ -134,7 +134,7 @@
     "image": "northasouth.jpg",
     "Tags": ["Classic"],
     "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/4tiE4qY6LY1gNNeCX5TkGf?utm_source=generator&theme=0&si=3aLLcBnmRt-0iu3qcmf0Ew", 
-    "ratings": {"laureen": 3.5}
+    "ratings": {"rachel":3, "laureen": 4.5}
   
   },
   {
@@ -143,7 +143,7 @@
     "image": "invocation-cover.jpg",
     "Tags": ["Horror"],
     "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0Ch9KAE8AILzZSP476qrtH?si=V7bSE7X7QmSW3d__uN_rsg", 
-    "ratings": {"rachel": 4.5}
+    "ratings": {"rachel": 4.5, "laureen":2}
   
   },
   {
@@ -152,7 +152,7 @@
     "image": "americanah-cover.jpg",
     "Tags": ["Diversity"],
     "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/2cIJO0EIHTMEN2ZTKfBY2P?si=_7Kl59sHREawFgXfm75igQ", 
-    "ratings": {"rachel": 4.5}
+    "ratings": {"rachel": 4.5, "laureen":5}
   
   },
   {
@@ -170,7 +170,7 @@
     "image": "careless-cover.jpg",
     "Tags": ["Memoir"],
     "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/31ubAkxCoE38qDwJT3rRSY?si=FQlAVzcBTZCjmAJ6HhfdNg", 
-   "ratings": {"rachel": 4.5}
+   "ratings": {"rachel": 4.5, "laureen":5}
   
   },
   {
@@ -179,7 +179,7 @@
     "image": "rats-cover.jpg",
     "Tags": ["Fiction", "Montly Recap"],
     "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/5bPu0szdwKXvjPm1GeBxML?si=hw_FcbTWTWWtFEj6oN38Ig", 
-    "ratings": {"rachel": 5}
+    "ratings": {"rachel": 5, "laureen":4}
   
   },
   {
@@ -223,7 +223,7 @@
     "image": "katabasis-cover.jpg",
     "Tags": ["Fantasy"],
     "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0cV64gm0XC1V9WqXRkPX0o?si=Z7Dv8cNISrCzH3zLWnyiFA", 
-    "ratings": {"rachel": 4.5}
+    "ratings": {"rachel": 4.5, "laureen":4}
   
   },
   {
@@ -241,7 +241,7 @@
     "image": "cranes.jpg",
     "Tags": ["Fantasy"],
     "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0cV64gm0XC1V9WqXRkPX0o?si=Z7Dv8cNISrCzH3zLWnyiFA", 
-    "ratings": {"laureen": 4.5}
+    "ratings": {"rachel":3,"laureen": 4.5}
   
   },
   {
