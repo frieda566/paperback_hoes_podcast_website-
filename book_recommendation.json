@@ -238,7 +238,7 @@
   {
     "Book": "Six Crimson Cranes",
     "Author": "Elizabeth Lim",
-    "image": "cranes.jpg",
+    "image": "crane.jpg",
     "Tags": ["Fantasy"],
     "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0cV64gm0XC1V9WqXRkPX0o?si=Z7Dv8cNISrCzH3zLWnyiFA", 
     "ratings": {"rachel":3,"laureen": 4.5}
