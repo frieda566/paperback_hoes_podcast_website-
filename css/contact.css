@@ -42,6 +42,7 @@
 }
 
 .contact-form input[type="text"],
+.contact-form input[type="email"],
 .contact-form select{
     flex: 0 0 auto;
     padding:10px 12px;
