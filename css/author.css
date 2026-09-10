@@ -158,4 +158,80 @@
     margin:0;
 }
 
+.host-info {
+    display:none !important;
+}
+
+.host-info.show {
+    display:block !important;
+    margin-top:15px;
+}
+
+.expand-section {
+    margin-top:20px;
+}
+
+.expand-section summary {
+    cursor:pointer;
+    background: #E8DDF7;
+    color: #4a4a4a;
+    padding:12px 18px;
+    border-radius:10px;
+    font-weight:bold;
+    text-align:center;
+    list-style:none;
+}
+
+.expand-section summary::-webkit-details-marker {
+    display:none;
+}
+
+.expand-section summary:hover {
+    background: #dccbeb;
+}
+
+.book-cover {
+    margin-top:20px;
+}
+
+.book-cover img {
+    width:220px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:0 auto 20px;
+    border-radius:10px;
+}
+
+.host-card iframe {
+    width:100%;
+    margin-top:20px;
+    border:0;
+}
+
+.host-btn {
+    width:100%;
+    margin-top:15px;
+}
+
+.thought-buttons {
+    display:flex;
+    gap:20px;
+    width:100%;
+    margin-top:20px;
+}
+
+.thought-column {
+    flex:1;
+    min-width: 0;
+}
+
+.thought-column .host-btn {
+    width:100%;
+}
+
+.thought-column .host-info {
+    width:100%;
+}
+
 
