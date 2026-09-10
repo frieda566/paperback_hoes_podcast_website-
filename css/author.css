@@ -1,0 +1,108 @@
+.hosts {
+    width:100%;
+    padding:70px50px;
+    text-align:center;
+}
+
+.hostsh2 {
+    color: #6f5d86;
+    margin-bottom:40px;
+}
+
+.hosts-container {
+    width:100%;
+    max-width:1100px;
+    margin:0auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+    align-items:center;
+}
+
+.host-card {
+    width:100%;
+    max-width:1000px;
+    min-height:700px;
+
+    background: #fffaf6;
+    border:2pxsolid #E8DDF7;
+    border-radius:15px;
+    padding:25px;
+
+    box-shadow:04px10pxrgba(0,0,0,.08);
+}
+
+.host-cardimg {
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+
+.host-cardh3 {
+    color: #6f5d86;
+    margin-bottom:15px;
+}
+
+.host-info {
+    display:none!important;
+}
+
+.host-info.show {
+    display:block!important;
+    margin-top:15px;
+}
+/* Expanding the sections */
+
+.expand-section {
+    margin-top:20px;
+}
+
+.expand-sectionsummary {
+    cursor:pointer;
+    background: #E8DDF7;
+    color: #4a4a4a;
+    padding:12px18px;
+    border-radius:10px;
+    font-weight:bold;
+    text-align:center;
+    list-style:none;
+}
+
+.expand-sectionsummary::-webkit-details-marker {
+    display:none;
+}
+
+.expand-sectionsummary:hover {
+    background: #dccbeb;
+}
+/* Book covers */
+
+.book-cover {
+    margin-top:20px;
+}
+
+.book-coverimg {
+    width:220px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:0auto20px;
+    border-radius:10px;
+}
+/* Spotify Links */
+
+.host-cardiframe {
+    width:100%;
+    margin-top:20px;
+    border:0;
+}
+/* Host buttons */
+
+.host-btn {
+    width:100%;
+    margin-top:15px;
+}
+
