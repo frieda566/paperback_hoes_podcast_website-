@@ -1,0 +1,220 @@
+@media (max-width: 1300px) {
+    /*header*/
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        padding: 15px 25px;
+        gap: 15px;
+    }
+
+    .logo {
+        grid-column: 1;
+        justify-self: start;
+    }
+
+    .header-right {
+        grid-column: 2;
+        justify-self: end;
+        display:flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /*toggle*/ 
+    .menu-toggle {
+        display: flex;
+    }
+
+    /*nav*/
+    nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+    }
+
+    nav.open {
+        max-height: 500px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 10px 0 15px;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 12px 0;
+    }
+
+    /*about section*/
+    .about {
+        padding: 40px 25px;
+    }
+
+    .about-text {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    /*host section*/
+    .hosts {
+        padding: 50px 25px;
+    }
+    
+    .hosts-container {
+        gap: 25px;
+    }
+
+    /*episode section*/
+    .card-grid {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .episode {
+        padding: 40px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    /*header*/
+    header {
+        padding: 12px 15px;
+    }
+
+    .logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .logo span {
+        font-size: 1.1rem;
+    }
+
+    /*dark mode button*/
+    #themeBtn {
+        height: 40px;
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 10px;
+        min-width: auto;
+        margin-right: 0;
+    }
+
+    /*menu toggle*/
+    .menu-toggle {
+        width: 28px;
+        height: 20px;
+    }
+
+    /*about section*/
+    .about {
+        padding: 35px 20px;
+    }
+
+    .about h1 {
+        font-size: 2rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+
+    /*banner*/
+    .banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    /*host section*/
+    .hosts {
+        padding: 45px 20px;
+    }
+
+    .hosts h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .hosts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .host-card {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    .host-card img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /*episode section*/
+    .episode {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 25px;
+    }
+
+    .book-cover {
+        max-width: 220px;
+    }
+
+    .episode-text {
+        width: 100%;
+    }
+
+    /*episode cards*/
+    .card-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 20px 40px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-content p {
+        font-size: 0.95rem;
+    }
+
+    .card iframe {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /*tags*/
+    .tag-filter {
+        padding: 0 20px;
+    }
+
+    .tag-btn {
+        padding: 7px 12px;
+        font-size: 0.85rem;
+    }
+
+    /*footer*/
+    footer {
+        padding: 20px 15px;
+        font-size: 0.9rem;
+    }
+}
