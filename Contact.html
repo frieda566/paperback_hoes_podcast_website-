@@ -46,7 +46,8 @@
         <h1>Contact Us 💌</h1>
         <p>
             If you have any questions, suggestions, or would like to collaborate
-            with us, please feel free to reach out. We would love to hear from you!
+            with us, please feel free to reach out. We would love to hear from you! 
+        </p>
     </div>
 </section>
 
@@ -56,13 +57,18 @@
     
         <h2>Send us a message</h2>
    
-        <form class="contact-form">
+        <form class="contact-form"
+            action="https://formspree.io/f/mnqvdyqv"
+            method="POST">
 
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your name" required>
 
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+
             <label for="msg">Message</label>
-            <textarea id="msg" name="msg" rows="5" placeholder="Your message..." required></textarea>
+            <textarea id="msg" name="message" rows="5" placeholder="Your message..." required></textarea>
 
             <label for="topic">Topic</label>
             <select id="topic" name="topic">
