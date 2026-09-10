@@ -598,6 +598,32 @@ body.dark-mode .thought-column .host-info {
     .episode-player {
         margin: 20px 0 25px;
     }
+    /* TEMPORARY DEBUG */
+
+.book-info {
+    display: grid !important;
+    visibility: visible !important;
+}
+
+.episode-player {
+    display: block !important;
+    visibility: visible !important;
+}
+
+.thought-buttons {
+    display: grid !important;
+    visibility: visible !important;
+}
+
+.thought-column {
+    display: flex !important;
+    visibility: visible !important;
+}
+
+.host-btn {
+    display: inline-flex !important;
+    visibility: visible !important;
+}
 
 }
 
