@@ -16,7 +16,7 @@ overlay.className = 'event-overlay';
 
 overlay.innerHTML = `
     <div class="event-modal">
-        <button class="event-close">&times;</button>
+        <button class="event-close button-29" id="event-close">✕</button>
 
         <img id="event-image" src="" alt="">
 
