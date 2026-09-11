@@ -1,8 +1,11 @@
-# web_programming
+#PAPERBACK HOES PODCAST 
 
-Assignment 6 (changes in Assignment 3): 
-- embedded the Spotify episodes for "Recent episodes"
-- "Reading Mode" -> Dark Mode for the website 
-- "Show Favorites/ Hide Favorites" button for Rachel and Laureen 
-- Goodreads link embedded when clicked on the "Goodreads profile" button 
-- accurate links to different landing pages (Home, Episodes, Books, Contact)
+This is a website for the book podcast "Paperback Hoes" where visistors can: 
+
+- Learn about the hosts Rachel & Laureen 
+- Discover recent podcast episodes
+- Explore featured book recommendations 
+- Find information about guest authors 
+- Contact the podcast or submit book recommendations
+
+Our goal was to create a cozy, visually appealing hub for podcast listeners and book lovers. 
