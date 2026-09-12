@@ -151,7 +151,7 @@
     "Author": "Chimamanda Ngozi Adichie",
     "image": "americanah-cover.jpg",
     "Tags": ["Diversity"],
-    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/2cIJO0EIHTMEN2ZTKfBY2P?si=_7Kl59sHREawFgXfm75igQ", 
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/2cIJO0EIHTMEN2ZTKfBY2P?theme=0&si=_7Kl59sHREawFgXfm75igQ", 
     "ratings": {"rachel": 4.5, "laureen":5}
   
   },
@@ -169,7 +169,7 @@
     "Author": "Sarah Wynn-Williams",
     "image": "careless-cover.jpg",
     "Tags": ["Memoir"],
-    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/31ubAkxCoE38qDwJT3rRSY?si=FQlAVzcBTZCjmAJ6HhfdNg", 
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/31ubAkxCoE38qDwJT3rRSY?theme=0&si=FQlAVzcBTZCjmAJ6HhfdNg", 
    "ratings": {"rachel": 4.5, "laureen":5}
   
   },
@@ -178,7 +178,7 @@
     "Author": "Emily Austin",
     "image": "rats-cover.jpg",
     "Tags": ["Fiction", "Montly Recap"],
-    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/5bPu0szdwKXvjPm1GeBxML?si=hw_FcbTWTWWtFEj6oN38Ig", 
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/5bPu0szdwKXvjPm1GeBxML?theme=0&si=hw_FcbTWTWWtFEj6oN38Ig", 
     "ratings": {"rachel": 5, "laureen":4}
   
   },
@@ -187,7 +187,7 @@
     "Author": "Andy Weir",
     "image": "hail-cover.jpg",
     "Tags": ["Gift Guide"],
-    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/3EIc2WUAXpNhg6b1u1SkzD?si=qKF5sa8fT_S5OurkYc1d1A", 
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/3EIc2WUAXpNhg6b1u1SkzD?theme=0&si=qKF5sa8fT_S5OurkYc1d1A", 
     "ratings": {"rachel": 4.5,"laureen": 3.5}
   },
   {
@@ -195,7 +195,7 @@
     "Author": "Stephanie Meyer",
     "image": "twilight-cover.jpg",
     "Tags": ["Fantasy"],
-    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/3vQWuguMWfA8AtKs7r64kl?si=sz7Jhn0LSBGRO2PbsvC4pQ", 
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/3vQWuguMWfA8AtKs7r64kl?theme=0&si=sz7Jhn0LSBGRO2PbsvC4pQ", 
     "ratings": {"rachel": 5,"laureen": 5}
   
   },
@@ -213,7 +213,7 @@
     "Author": "Leigh Bardugo",
     "image": "familiar-cover.jpg",
     "Tags": ["Monthly Recap"],
-    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/1L2dXxGiDwqfy2SEeNhaOF?si=UqIHy7iaQ1GJfeXLgFpfpg", 
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/1L2dXxGiDwqfy2SEeNhaOF?theme=0&si=UqIHy7iaQ1GJfeXLgFpfpg", 
     "ratings": {"rachel": 3,"laureen": 4.5}
   
   },
@@ -231,7 +231,7 @@
     "Author": "Sonoko Machida",
     "image": "sea-cover.jpg",
     "Tags": ["Monthly Recap"],
-    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/2LOPwLC4f6ZMdNCf6kYTZH?si=krjaQtKQRb-CBlBnk_7NKA", 
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/2LOPwLC4f6ZMdNCf6kYTZH?theme=0&si=krjaQtKQRb-CBlBnk_7NKA", 
     "ratings": {"rachel": 4.5,"laureen": 5}
   
   },
@@ -240,7 +240,7 @@
     "Author": "Elizabeth Lim",
     "image": "crane.jpg",
     "Tags": ["Fantasy"],
-    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0cV64gm0XC1V9WqXRkPX0o?si=Z7Dv8cNISrCzH3zLWnyiFA", 
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0cV64gm0XC1V9WqXRkPX0o?theme=0&si=Z7Dv8cNISrCzH3zLWnyiFA", 
     "ratings": {"rachel":3,"laureen": 4.5}
   
   },
@@ -249,7 +249,7 @@
     "Author": "Louisa May Alcott",
     "image": "little.jpg",
     "Tags": ["Classic"],
-    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0cV64gm0XC1V9WqXRkPX0o?si=Z7Dv8cNISrCzH3zLWnyiFA", 
+    "spotifyEmbedUrl":"https://open.spotify.com/embed/episode/0cV64gm0XC1V9WqXRkPX0o?theme=0&si=Z7Dv8cNISrCzH3zLWnyiFA", 
     "ratings": {"rachel": 4.5, "laureen":4.5}
   
   }
