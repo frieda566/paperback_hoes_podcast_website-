@@ -13,7 +13,6 @@
 .hosts-container {
     width: 100%;
     max-width: 1200px;
-
     margin: 0 auto;
 
     display: flex;
@@ -27,11 +26,15 @@
 
 .host-card {
     position: relative;
+
     width: 100%;
     max-width: 1150px;
+
     margin: 0 auto;
     padding: 40px;
+
     box-sizing: border-box;
+
     background: #fffaf6;
     border: 2px solid #E8DDF7;
     border-radius: 20px;
@@ -40,24 +43,9 @@
 
     text-align: center;
 
-    overflow: hidden;
+    height: auto;
+    overflow: visible;
 }
-
-
-/* =========================================================
-   AUTHOR IMAGE
-   ========================================================= */
-
-/*
-   IMPORTANT:
-   The old selector was:
-
-       .host-card > author-img
-
-   That is incorrect.
-
-   The image uses the class "author-image".
-*/
 
 .host-card > .author-image {
     display: block;
@@ -74,15 +62,13 @@
     margin: 0 auto 20px;
 }
 
-
-/* Fallback in case an author image doesn't have
-   the author-image class */
-
 .host-card > img {
     display: block;
 
     width: 180px;
     height: 180px;
+
+    max-width: 100%;
 
     object-fit: cover;
 
@@ -90,11 +76,6 @@
 
     margin: 0 auto 20px;
 }
-
-
-/* =========================================================
-   AUTHOR NAME
-   ========================================================= */
 
 .host-card h3 {
     color: #6f5d86;
@@ -104,11 +85,6 @@
     font-size: 1.5rem;
 }
 
-
-/* =========================================================
-   AUTHOR INTRODUCTION
-   ========================================================= */
-
 .author-introduction {
     width: 100%;
     max-width: 850px;
@@ -117,11 +93,6 @@
 
     line-height: 1.7;
 }
-
-
-/* =========================================================
-   BOOK + PLOT SUMMARY
-   ========================================================= */
 
 .book-info {
     position: relative;
@@ -145,11 +116,6 @@
     clear: both;
 }
 
-
-/* =========================================================
-   BOOK COVER
-   ========================================================= */
-
 .book-info .book-cover {
     width: 100%;
 
@@ -159,7 +125,6 @@
     align-items: flex-start;
 
     margin: 0;
-
     padding: 0;
 
     box-sizing: border-box;
@@ -180,11 +145,6 @@
     box-sizing: border-box;
 }
 
-
-/* =========================================================
-   PLOT SUMMARY
-   ========================================================= */
-
 .plot-summary {
     width: 100%;
 
@@ -195,12 +155,13 @@
     background: #f7f1fb;
 
     border: 1px solid #E8DDF7;
-
     border-radius: 15px;
 
     box-sizing: border-box;
 
     text-align: left;
+
+    height: auto;
 }
 
 .plot-summary h4 {
@@ -215,12 +176,12 @@
     margin: 0;
 
     line-height: 1.7;
+
+    height: auto;
+    max-height: none;
+
+    overflow: visible;
 }
-
-
-/* =========================================================
-   SPOTIFY PLAYER
-   ========================================================= */
 
 .episode-player {
     position: relative;
@@ -247,11 +208,6 @@
     border-radius: 12px;
 }
 
-
-/* =========================================================
-   THOUGHTS CONTAINER
-   ========================================================= */
-
 .thought-buttons {
     position: relative;
 
@@ -269,15 +225,10 @@
 
     box-sizing: border-box;
 
-    align-items: stretch;
+    align-items: start;
 
     clear: both;
 }
-
-
-/* =========================================================
-   THOUGHT COLUMN
-   ========================================================= */
 
 .thought-column {
     position: relative;
@@ -292,17 +243,9 @@
     flex-direction: column;
 
     box-sizing: border-box;
+
+    height: auto;
 }
-
-
-/* =========================================================
-   THOUGHT BUTTON
-   ========================================================= */
-
-/*
-   These rules override the generic .host-btn
-   in style.css.
-*/
 
 .thought-column .host-btn {
     position: relative;
@@ -314,7 +257,7 @@
 
     min-width: 0 !important;
 
-    height: auto;
+    height: auto !important;
     min-height: 48px;
 
     margin: 0 !important;
@@ -338,72 +281,60 @@
 }
 
 
-/* =========================================================
-   THOUGHT TEXT BOX
-   ========================================================= */
-
 .thought-column .host-info {
     position: relative;
 
     width: 100% !important;
     max-width: 100% !important;
-
     min-width: 0;
 
-    min-height: 220px;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
 
-    flex: 1;
-
-    display: block !important;
+    display: none !important;
 
     margin: 10px 0 0 !important;
-
     padding: 25px;
 
     box-sizing: border-box;
 
     background: #f7f1fb;
-
     border: 1px solid #E8DDF7;
-
     border-radius: 15px;
 
     text-align: left;
 
+    overflow: visible !important;
     overflow-wrap: break-word;
-
     word-wrap: break-word;
 }
 
+.thought-column .host-info.show {
+    display: block !important;
+}
+
 .thought-column .host-info p {
+    display: block !important;
+
+    width: 100%;
+
+    height: auto !important;
+    max-height: none !important;
+
     margin-top: 0;
 
     line-height: 1.7;
+
+    overflow: visible !important;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .thought-column .host-info p:last-child {
     margin-bottom: 0;
 }
-
-
-/*
-   IMPORTANT:
-
-   Do NOT use:
-
-       .host-info {
-           display: none !important;
-       }
-
-   here.
-
-   The thought boxes are intentionally visible.
-*/
-
-
-/* =========================================================
-   DETAILS / EXPAND SECTION
-   ========================================================= */
 
 .expand-section {
     margin-top: 20px;
@@ -435,11 +366,6 @@
     background: #dccbeb;
 }
 
-
-/* =========================================================
-   DARK MODE
-   ========================================================= */
-
 body.dark-mode .host-card {
     background: #444;
     color: white;
@@ -460,11 +386,6 @@ body.dark-mode .thought-column .host-info {
 
     border-color: #777;
 }
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
 
 @media (max-width: 900px) {
 
@@ -489,11 +410,6 @@ body.dark-mode .thought-column .host-info {
 
 }
 
-
-/* =========================================================
-   SMALL TABLET
-   ========================================================= */
-
 @media (max-width: 700px) {
 
     .hosts {
@@ -503,10 +419,6 @@ body.dark-mode .thought-column .host-info {
     .host-card {
         padding: 25px;
     }
-
-    /*
-       Stack book cover and plot summary.
-    */
 
     .book-info {
         grid-template-columns: 1fr;
@@ -520,22 +432,15 @@ body.dark-mode .thought-column .host-info {
         margin: 0 auto;
     }
 
-    /*
-       Stack thought boxes.
-    */
-
     .thought-buttons {
         grid-template-columns: 1fr;
 
         gap: 25px;
+
+        align-items: start;
     }
 
 }
-
-
-/* =========================================================
-   PHONE
-   ========================================================= */
 
 @media (max-width: 500px) {
 
@@ -549,6 +454,9 @@ body.dark-mode .thought-column .host-info {
         padding: 20px;
 
         border-radius: 15px;
+
+        height: auto;
+        overflow: visible;
     }
 
     .host-card > .author-image,
@@ -587,12 +495,25 @@ body.dark-mode .thought-column .host-info {
         gap: 20px;
 
         margin-top: 25px;
+
+        align-items: start;
     }
 
-    .thought-column .host-info {
-        min-height: 0;
+    .thought-column {
+        height: auto;
+    }
+
+    .thought-column .host-info,
+    .thought-column .host-info.show {
+        min-height: 0 !important;
+        height: auto !important;
+        max-height: none !important;
 
         padding: 20px;
+
+        overflow: visible !important;
+
+        flex: none !important;
     }
 
     .episode-player {

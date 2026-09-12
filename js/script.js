@@ -1,40 +1,60 @@
 const themeBtn = document.getElementById("themeBtn");
 
-themeBtn.addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode");
-});
+if (themeBtn) {
+
+    themeBtn.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+            themeBtn.textContent = "☀️ Light Mode";
+        } else {
+            themeBtn.textContent = "🌙 Dark Mode";
+        }
+
+    });
+
+}
 
 const menuToggle = document.getElementById("menuToggle");
 const mainNav = document.getElementById("mainNav");
 
-menuToggle.addEventListener("click", () => {
-    menuToggle.classList.toggle("active");
-    mainNav.classList.toggle("open");
-});
+if (menuToggle && mainNav) {
 
-const buttons = document.querySelectorAll(".host-btn");
+    menuToggle.addEventListener("click", function () {
 
-buttons.forEach(button => {
-    button.addEventListener("click", function () {
-        const info = this.nextElementSibling;
-        info.classList.toggle("show");
+        menuToggle.classList.toggle("active");
+        mainNav.classList.toggle("open");
 
-        this.textContent = info.classList.contains("show")
-            ? "Hide Favorites"
-            : "Show Favorites";
     });
-});
 
-const cursor = document.createElement('div');
-cursor.className = 'custom-cursor';
+}
+
+const cursor = document.createElement("div");
+
+cursor.className = "custom-cursor";
+
 document.body.appendChild(cursor);
 
-document.addEventListener('mousemove', e => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
+
+document.addEventListener("mousemove", function (e) {
+
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+
 });
 
-document.querySelectorAll('a, button, select, .card, .host-card').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-});
+
+document
+    .querySelectorAll("a, button, select, .card, .host-card")
+    .forEach(function (el) {
+
+        el.addEventListener("mouseenter", function () {
+            cursor.classList.add("hover");
+        });
+
+        el.addEventListener("mouseleave", function () {
+            cursor.classList.remove("hover");
+        });
+
+    });
