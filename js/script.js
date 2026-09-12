@@ -7,9 +7,9 @@ if (themeBtn) {
         document.body.classList.toggle("dark-mode");
 
         if (document.body.classList.contains("dark-mode")) {
-            themeBtn.textContent = " Light Mode";
+            themeBtn.textContent = "Light Mode";
         } else {
-            themeBtn.textContent = " Dark Mode";
+            themeBtn.textContent = "Dark Mode";
         }
 
     });
@@ -29,6 +29,32 @@ if (menuToggle && mainNav) {
     });
 
 }
+
+const buttons = document.querySelectorAll(".host-btn");
+
+buttons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        const info = button.nextElementSibling;
+
+        if (!info || !info.classList.contains("host-info")) {
+            return;
+        }
+
+        const isOpen = info.classList.toggle("show");
+
+        const buttonName = button.dataset.name || "Favorites";
+
+        if (isOpen) {
+            button.textContent = "Hide " + buttonName;
+        } else {
+            button.textContent = button.dataset.name || "Show Favorites";
+        }
+
+    });
+
+});
 
 const cursor = document.createElement("div");
 
