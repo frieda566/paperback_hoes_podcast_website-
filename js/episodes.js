@@ -7,6 +7,7 @@ async function loadEpisodes() {
     episodes = await fetch('episode_guide.json').then(r => r.json());
     episodes.sort((a, b) => b.number - a.number);
 
+    // Sets up Fuse.js for searching episodes based on title, description, and tags
     fuse = new Fuse(episodes, {
         keys: [
             {
@@ -70,6 +71,7 @@ function renderTagFilter() {
 function applyFilters() {
     let filtered = episodes;
 
+    // Applies the selected tag and search filters to the episodes
     if (activeTags.size > 0) {
         filtered = filtered.filter(ep =>
             ep.tags.some(tag => activeTags.has(tag))
@@ -101,6 +103,7 @@ function renderEpisodes(list) {
         return;
     }
 
+    // Generates the episode cards and Spotify embeds dynamically based on the filtered list of episodes
     grid.innerHTML = list.map(ep => `
         <div class="card">
             <div class="episode-number">#${ep.number}</div>

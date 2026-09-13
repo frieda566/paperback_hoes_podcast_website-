@@ -1,3 +1,4 @@
+// Creates the Leaflet map and centers it on Germany with a zoom
 const map = L.map('map').setView([51.1657, 10.4515], 6); 
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -5,12 +6,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 18
 }).addTo(map);
 
+// Custom icon for the event markers
 const customIcon = L.icon({
   iconUrl: 'images/pin.png', 
   iconSize: [30, 55],
   iconAnchor: [14, 38]
 });
 
+// Creates the event overlay and modal dynamically
 const overlay = document.createElement('div');
 overlay.className = 'event-overlay';
 
@@ -41,6 +44,7 @@ overlay.addEventListener('click', (event) => {
     }
 });
 
+// Loads the event data and creates a marker for each event 
 fetch('events.json')
     .then(response => response.json())
     .then(events => {
@@ -51,6 +55,7 @@ fetch('events.json')
                 icon: customIcon
             }).addTo(map);
 
+            // Displays the event information when a marker is clicked
             marker.on('click', () => {
 
                 document.getElementById('event-image').src = ev.image;

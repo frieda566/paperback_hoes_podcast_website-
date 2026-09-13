@@ -1,3 +1,4 @@
+// Toggles between dark and light mode when the theme button is clicked, and updates the button text accordingly
 const themeBtn = document.getElementById("themeBtn");
 
 if (themeBtn) {
@@ -19,6 +20,7 @@ if (themeBtn) {
 const menuToggle = document.getElementById("menuToggle");
 const mainNav = document.getElementById("mainNav");
 
+// Opens and closes the mobile navigation menu 
 if (menuToggle && mainNav) {
 
     menuToggle.addEventListener("click", function () {
@@ -56,6 +58,7 @@ buttons.forEach(function (button) {
 
 });
 
+// Creates a custom cursor that follows the mouse 
 const cursor = document.createElement("div");
 
 cursor.className = "custom-cursor";
