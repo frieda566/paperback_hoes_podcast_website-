@@ -12,6 +12,7 @@ body{
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 2 L4 20 L9 16 L12 22 L15 20.5 L12 14.5 L18 14.5 Z" fill="%236f5d86" stroke="white" stroke-width="1"/></svg>') 4 2, auto !important;
 }
 
+/* Custom cursor for interactive elements like links, buttons, and cards */
 a, button, .host-btn, #themeBtn, .button-29,
 .card, .host-card, select, input, textarea,
 .menu-toggle, summary, #floatingBooks, iframe, .flip-card, #BookGrid, #searchInput, .tag-btn, .event-close {
@@ -22,6 +23,7 @@ h1{
     font-family: 'Great Vibes', 
 }
 
+/* Header layout */
 header{
     background:#F9DCE3;
     padding:20px 50px;
@@ -58,6 +60,7 @@ header{
     grid-column:3;
 }
 
+/* Dark mode styles for the entire website */
 body.dark-mode{
     background:#444;
     color:white;
@@ -106,6 +109,7 @@ body.dark-mode .card{
     color:white;
 }
 
+/* Banner and about section */
 .banner{
     width:100%;
 }
@@ -139,6 +143,7 @@ body.dark-mode .card{
     font-size:1.05rem;
 }
 
+/* Host cards section */
 .hosts{
     padding:70px 50px;
     text-align:center;
@@ -190,6 +195,7 @@ body.dark-mode .card{
     margin-bottom:15px;
 }
 
+/* Shared button styling */ 
 .host-btn,
 #themeBtn,
 .button-29 {
@@ -337,6 +343,7 @@ footer{
     padding:25px;
 }
 
+/* Responsive navigation menu */
 .menu-toggle{
     display:none;
     flex-direction:column;
@@ -405,6 +412,7 @@ nav ul li a{
     font-size:1.1rem;
 }
 
+/* Switches naviagtion to a hamburger menu on smaller screens */
 @media(max-width:1300px){
     .contact-content{
         flex-direction:column;
@@ -446,6 +454,7 @@ nav ul li a{
     }
 }
 
+/* Adjusts the layout for smaller screens */
 @media(max-width: 768px){
     .contact-content{
         flex-direction: column;
@@ -461,6 +470,7 @@ nav ul li a{
     }
 }
 
+/* Search and tag filter */
 .search-bar{
     display:flex;
     justify-content:center;
@@ -574,6 +584,7 @@ nav ul li a{
     padding:0 60px 60px;
 }
 
+/* Dark mode for search and filter elements */
 body.dark-mode .search-bar input{
     background:#444;
     color:white;

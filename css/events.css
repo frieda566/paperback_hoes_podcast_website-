@@ -1,3 +1,4 @@
+/* Main Map Container */
 #map {
     height: 600px;
     width: 100%;
@@ -7,6 +8,7 @@
     overflow: hidden;
 }
 
+/* Full-screen overlay behind the event pop-up */
 .event-overlay {
     position: fixed;
     inset: 0;
@@ -33,25 +35,18 @@
     visibility: visible;
 }
 
+/* Event information pup-up */ 
 .event-modal {
     position: relative;
-
     display: flex;
-
     width: 90%;
     max-width: 800px;
-
     background: #fffaf6;
-
     border: 2px solid #E8DDF7;
     border-radius: 20px;
-
     overflow: hidden;
-
     box-shadow: 0 20px 50px rgba(0,0,0,.3);
-
     transform: translateY(20px) scale(0.97);
-
     transition: transform 0.3s ease;
 }
 
@@ -59,10 +54,10 @@
     transform: translateY(0) scale(1);
 }
 
+/* Event image inside the pop-up */
 .event-modal img {
     width: 45%;
     min-height: 400px;
-
     object-fit: cover;
 }
 
@@ -79,40 +74,29 @@
 
 .event-city {
     color: #c68ab5;
-
     text-transform: uppercase;
     letter-spacing: 2px;
-
     font-size: 0.85rem;
     font-weight: bold;
-
     margin-bottom: 10px;
 }
 
 
 .event-content h2 {
     color: #6f5d86;
-
     font-size: 2.3rem;
-
     margin-bottom: 15px;
 }
 
-
+/* Date displayed as a small label */
 .event-date {
     display: inline-block;
-
     background: #E8DDF7;
-
     padding: 7px 14px;
-
     border-radius: 20px;
-
     font-size: 0.9rem;
     font-weight: bold;
-
     width: fit-content;
-
     margin-bottom: 20px;
 }
 
@@ -121,6 +105,7 @@
     line-height: 1.7;
 }
 
+/* Close button in the top right corner of the pop-up */
 .event-close{
     position: absolute;
     top: 12px;
@@ -133,11 +118,6 @@
     min-width: 40px !important;
 }
 
-
-.event-close:hover {
-    background: #E8DDF7;
-}
-
 body.dark-mode .event-modal {
     background: #444;
     color: white;
@@ -147,13 +127,12 @@ body.dark-mode .event-content h2 {
     color: #E8DDF7;
 }
 
+/* Adjusts the event modal for smaller screens */
 @media (max-width: 700px) {
 
     .event-modal {
         flex-direction: column;
-
         max-height: 90vh;
-
         overflow-y: auto;
     }
 

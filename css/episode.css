@@ -1,3 +1,4 @@
+/* Recent Episodes Section */
 .recent-episodes{
     padding:60px;
     text-align:center;
@@ -8,10 +9,12 @@
     color:#6f5d86;
 }
 
+/* Adds space below the introductory paragraph in the recent episodes section */
 .recent-episodes p{
     margin-bottom:30px;
 }
 
+/* Responsive grid for the episode cards*/
 .card-grid{
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -19,6 +22,7 @@
     align-items:start;
 }
 
+/* Individual episode card styling */
 .card{
     background:#fffaf6;
     border:2px solid #E8DDF7;
@@ -30,6 +34,7 @@
     overflow:visible;
 }
 
+/* Spotify episode player iframe inside the episode card */
 .card iframe{
     width:100%;
     min-width:300px;
@@ -46,6 +51,7 @@
     flex-direction:column;
 }
 
+/* Limits episode descriptions to three lines */
 .card-content p{
     display:-webkit-box;
     -webkit-line-clamp:3;
@@ -55,6 +61,7 @@
     text-overflow:ellipsis;
 }
 
+/* Slightly lifts the card when the mouse hover over it for a subtle interactive effect */
 .card:hover{
     transform:translateY(-5px);
 }
@@ -70,6 +77,7 @@
     overflow:hidden;
 }
 
+/* Episode number badge styling */
 .episode-number{
     display:inline-block;
     background:#F9DCE3;
