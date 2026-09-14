@@ -188,6 +188,7 @@ body.dark-mode .card{
 .host-info.show{
     display:block !important;
     margin-top:15px;
+    margin-bottom:25px;
 }
 
 .host-card h3{
