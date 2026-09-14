@@ -3,7 +3,7 @@ let fuse;
 let activeTags = new Set(); 
 let searchTerm = '';
 
-/* Creates full, half, and empty star icons based on the rating value */
+// Creates full, half, and empty star icons based on the rating value
 function renderStars(rating){
     if(rating === undefined || rating === null) return "";
 
@@ -25,7 +25,7 @@ function renderStars(rating){
     return html;
 }
 
-/* Loads the book data from a JSON file and initializes Fuse.js for searching */
+// Loads the book data from a JSON file and initializes Fuse.js for searching
 async function loadBooks() {
     try {
         recommendationBooks = await fetch("book_recommendation.json").then(r => r.json());
@@ -57,7 +57,7 @@ async function loadBooks() {
     }
 }
 
-/* Creates the available tag filter buttons */
+// Creates the available tag filter buttons
 function renderTagFilter() {
     const allTags = [...new Set(recommendationBooks.flatMap(book => book.Tags))].sort();
     const filterDiv = document.getElementById('tagFilter');
@@ -95,7 +95,7 @@ function renderTagFilter() {
     });
 }
 
-/* Applies the selected tags and search term to the books list */
+// Applies the selected tags and search term to the books list
 function applyFilters() {
     let filtered = recommendationBooks;
 
@@ -118,7 +118,7 @@ function applyFilters() {
     renderBooks(filtered);
 }
 
-/* Creates the book cards and adds the flip interaction */
+// Creates the book cards and adds the flip interaction */
 function renderBooks(list) {
     const grid = document.getElementById('BookGrid');
 

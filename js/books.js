@@ -5,7 +5,7 @@ let scene, camera, renderer, container;
 let bookMeshes = [];
 let raycaster, mouse;
 
-/* Load book data before creating the 3D scene */
+// Load book data before creating the 3D scene
 fetch("random_book.json")
     .then(response => response.json())
     .then(data => {
@@ -15,7 +15,7 @@ fetch("random_book.json")
         animate();
     });
 
-/* Sets up the Three.js scene, camera, and renderer, and adds event listeners for resizing and interaction */
+// Sets up the Three.js scene, camera, and renderer, and adds event listeners for resizing and interaction
 function initScene(){
     container = document.getElementById("floatingBooks");
     const width = container.clientWidth;
@@ -40,7 +40,7 @@ function initScene(){
     renderer.domElement.addEventListener("mousemove", onBookHover);
 }
 
-/* Generates random positions for the books within the visible area, ensuring they don't overlap too closely */
+// Generates random positions for the books within the visible area, ensuring they don't overlap too closely */
 function scatterPositions(count, width, height, minDist){
     const points = [];
 
@@ -92,7 +92,7 @@ function scatterPositions(count, width, height, minDist){
     return points;
 }
 
-/* Extracts the dominant color from an image by sampling its pixels */
+// Extracts the dominant color from an image by sampling its pixels
 function extractDominantColor(img){
     let r = 255, g = 255, b = 255;
 
@@ -119,7 +119,7 @@ function extractDominantColor(img){
     return { r, g, b };
 }
 
-/* Creates a texture for the book spine with a gradient and the book title */
+// Creates a texture for the book spine with a gradient and the book title
 function createSpineTexture(color, title){
     const canvas = document.createElement("canvas");
     canvas.width = 64;
@@ -155,7 +155,7 @@ function createSpineTexture(color, title){
     return texture;
 }
 
-/* Creates a texture for the book pages with a subtle lined pattern */
+// Creates a texture for the book pages with a subtle lined pattern
 function createPageTexture(){
     const canvas = document.createElement("canvas");
     canvas.width = 64;
@@ -180,7 +180,7 @@ function createPageTexture(){
     return texture;
 }
 
-/* Detects which book the mouse is hovering over and enlarges it */
+// Detects which book the mouse is hovering over and enlarges it
 function onBookHover(event) {
     const rect = renderer.domElement.getBoundingClientRect();
 
@@ -237,7 +237,7 @@ function renderStars(rating){
     return html;
 }
 
-/* Creates the 3D book objects and their textures */
+// Creates the 3D book objects and their textures
 function createBooks(){
     const loader = new THREE.TextureLoader();
 
@@ -282,7 +282,7 @@ function createBooks(){
                 const targetY = pos.y;
                 const targetZ = 0;
 
-                /* Store book data and animation parameters in userData for later use */
+                // Store book data and animation parameters in userData for later use
                 mesh.userData = {
                     book,
                     baseX: targetX, baseY: targetY, baseZ: targetZ,
@@ -320,7 +320,7 @@ function createBooks(){
     });
 }
 
-/* Continously animates the books and renders the scene */
+// Continously animates the books and renders the scene
 function animate(){
     requestAnimationFrame(animate);
     const t = performance.now() * 0.0006;
@@ -339,7 +339,7 @@ function animate(){
     renderer.render(scene, camera);
 }
 
-/* Updates the camera and renderer when the window is resized to maintain aspect ratio and size */
+// Updates the camera and renderer when the window is resized to maintain aspect ratio and size
 function onResize(){
     const width = container.clientWidth;
     const height = container.clientHeight;
@@ -348,7 +348,7 @@ function onResize(){
     renderer.setSize(width, height);
 }
 
-/* Opens the book information overlay when a book is clicked, using raycasting to determine which book was selected */
+// Opens the book information overlay when a book is clicked, using raycasting to determine which book was selected
 function onBookClick(event){
     const rect = renderer.domElement.getBoundingClientRect();
     mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
@@ -367,7 +367,7 @@ document.getElementById("generateBtn").addEventListener("click", () => {
     showBookOverlay(randomBook);
 });
 
-/* Displays the selected book and its information in the overlay */
+// Displays the selected book and its information in the overlay 
 function showBookOverlay(randomBook){
     container.classList.add("blurred");
     gsap.to(bookMeshes.flatMap(m => m.material), { opacity: 0.25, duration: 0.5 });
@@ -397,7 +397,7 @@ document.getElementById("overlayBackdrop").addEventListener("click", (e) => {
     if(e.target.id === "overlayBackdrop") closeOverlay();
 });
 
-/* Closes the book information overlay and restores the scene to its original state */
+// Closes the book information overlay and restores the scene to its original state 
 function closeOverlay(){
     gsap.to("#bookDisplay", {
         scale: 0.7,
