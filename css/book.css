@@ -187,7 +187,7 @@ body.dark-mode .stars .star-half::before {
     width: 40px;
     padding: 0 !important;
     height: 40px;
-    border: none;
+    border-radius: 6px;
     z-index: 2;
     min-width: 40px !important;
 }
