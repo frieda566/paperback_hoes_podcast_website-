@@ -212,4 +212,87 @@ Decide to focus on finishing everything we have started by now.  At end of proce
 ### Frieda: 
 - I updated the book interface once again including the layout of floating books and the prevention of overlaps and excessive rotation angles 
 
+## 29.08. 
+### Frieda: 
+- I tried adding a host rating for our book site  
+- It didn’t work initially because I connected it to the wrong json file  
+- It finally worked => I used the .star function  
+- I also updated the Event page once again  
+- While working on the different pages I realized that I hadn’t really taken the dark mode into consideration as much => I had forgotten to add the script.js to the different pages – it worked.  
+- But I changed the colours since I didn’t really like the ones we had initially picked out => I am still not really happy with it  
+- After showing our website to another person 
+he mentioned that the host container both open when you click on “Show Favourites” - I fixed that as well 
+    - Cause: display:flex on the shared container automatically stretched both host cards to the same height (align-items:stretch), making the second card appear larger despite its content remaining unchanged.   
+    - Solution: Adjusted to align-items: flex-start so that each card retains its own independent height. 
+- Further refinement of the episode/book cards (including uniform heading heights using `min-height` and `-webkit-line-clamp` to ensure single- and multi-line titles align flush). 
+
+## 30.08. (Meeting) (Online)   
+- Discussed final tasks left to be done to perfect design/look and functionality 
+- Decided on necessary add Ons to improve user experience  
+
+### To-Do till 06.09.2026:  
+#### Shared: 
+- more comments within the code (in English)  
+- Figure out how to connect pages for user testing/ git hub https link
+
+#### Frieda: 
+- Update Logo to initial one 
+- Make it visible that the books in the floating interface are clickable  
+    - Possibly implement a matching cursor  
+- Update header so that when the screen is adjusted the header moves accordingly and doesn’t just leave out some of the pages  
+- Move Contact page at the end  
+
+#### Rachel: 
+- Update documentation  
+- Update website texts (About Us, etc.) 
+- Create banner for Home Page  
+- Replace section of “The Seoul Season”, change heading from button to heading, add background 
+- Change Colour Hue of Reading Mode to Dark Mode 
+- add star rating 0-5, (0,5) for books mentioned on card  
+- add contact with email to receive message 
+- add collage for events 
+- update design for author page (pins)  
+- Try out if the website is suitable for the mobile version 
+
+## 03.09.
+### Frieda: 
+- Tried updating the menu button  
+- Still doesn’t really work 
+    - ![image](images_documentation/image_1_03_09.png)
+    - ![image](images_documentation/image_2_03_09.png)
+
+- Realized that the smartphone interface is a problem as well:  
+    - ![image](images_documentation/image_3_03_09.png)
+
+- Also tried changing the links in our code so that users could actually click through our github pages => hasn’t worked since   
+    - Looked back at my web programming assignment pages  
+
+### Rachel: 
+- I update the filler website texts (About Us, etc.) to more personal texts  
+- Additionally I finished designing the final banner for the home page, a problem was the formatting as it wouldn’t initially match all the layouts  
+- Then I replaced section of “The Seoul Season”,  and changed the heading from a button to heading when it came to the recent episodes on the home page  
+
+## 04.09.
+### Frieda: 
+- I wanted a custom cursor for our page and looked up a few pages but honestly they were a bit to much since our page already has many different items i didn’t want to overload it (https://www.freecodecamp.org/news/how-to-make-a-custom-mouse-cursor-with-css-and-javascript/) 
+- So i asked AI to just change the color of the cursor to the colors of our page and added that  
+- ##### Before Fuse.js 
+    - ![image](images_documentation/image_1_04_09.png)
+- ##### After Fuse.js
+    - ![image](images_documentation/image_2_04_09.png)
+
+## 05.09. 
+### Frieda: 
+- Today i started the final steps and went over the pages once again that I had done 
+- I realized that the in the dark mode because I hadn’t changed the nav background to transparent the pages had a weird pink background so I changed that  
+- I also added further aspects to the custom cursor  
+- Then I finally created further css files since our main css had gotten way to long  
+    - Some of the code parts were kept in the main body since I didn’t want the page to collapse  
+- I saw that our github pages had finally updated and the initial changes i had done were correct  
+- Sadly the lightwidget doesn’t seem to work so I will have to add a better placeholder
+    - ![image](images_documentation/image_05_09.png)
+
+### Rachel: 
+- I updated the documentation to add more sections for feedback and an explanation for the choices we made when designing the pages  
+- I also changed the Dark Mode to switch between Light and Dark not just one mode. 
 
