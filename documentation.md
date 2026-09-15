@@ -413,6 +413,81 @@ he mentioned that the host container both open when you click on “Show Favouri
 - The mobile version was also a challenge. We mainly focused on how the website looked on a normal screen while developing it, and only later realized how many things had to be adjusted for a smartphone. To be fair we think of our website as a website that is only used on a computer due to the amount of information. 
 - We also had some difficulties with external features such as the Spotify embeds and the Lightwidget. Some things did not work in the way we expected, and in the case of the Lightwidget, we eventually decided to replace it with a static picture because the actual widget required a login or subscription. This taught us that sometimes it is better to simplify a feature instead of spending too much time trying to force something to work.
 
+## Reflection: 
+- Overall, the project taught us a lot about how different parts of a website work together. At the beginning, we mostly thought about how the individual pages should look, but during the project we realized that the structure behind the pages is just as important. Working with JSON files, JavaScript functions and different CSS files made us understand much better how data and design can be connected.
+- Additionally, we also think that working together was an important part of the project. Having a shared GitHub workspace made the collaboration easier, but we also had to learn how to communicate when we were working on the code. In the beginning, it was easy to accidentally work on the same files at the same time, so we started informing each other when we were making bigger changes.
+- Another thing we noticed was that we became much more comfortable with trying things out and fixing problems. There were many situations where we did not immediately know how to solve something, so researching different approaches helped us understand how something could be implemented. 
+- Looking back, we think we managed to create the cozy and interactive feeling we wanted for the website. The user testing also showed us that the colour scheme and the different features worked well, while still giving us useful suggestions for improvement.
+
+
+## Sources 
+In general we relied on the pages from our web programming class, the mentioned sources down below. 
+### Script.js: 
+- https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById (getElementbyID) 
+- https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener (addEventListener)
+- https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList/toggle (classList.toggle()) 
+- https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll (querySelectorAll()) 
+- https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/clientX (mouse event) 
+
+### Index: 
+- https://www.w3schools.com/html/html_iframe.asp (iframe)
+
+### Episode Page: 
+- https://www.fusejs.io/
+- https://developer.mozilla.org/en-US/docs/Web/API/Response (fetch response)
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set (set, add, ...)
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter (filter) 
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map (map) 
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap (flatMap) 
+- https://www.fusejs.io/fuzzy-search.html (fuse) 
+- https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset (dataset)
+- https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling (event delegation) 
+- https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML (innerHTML)
+- https://community.appfarm.io/t/update-property-object-using-coded-component/1395/5 (filterDiv.innerHTML)
+### Book.js 
+- https://github.com/mrdoob/three.js/ (three.js) 
+- https://threejs.org/
+- https://threejs.org/docs/#BoxGeometry
+- https://threejs.org/docs/#Mesh
+- https://threejs.org/docs/?q=Texture#TextureLoader
+- https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/createLinearGradient 
+- https://threejs.org/docs/#CanvasTexture
+- https://threejs.org/docs/?q=Persp#PerspectiveCamera.getFilmHeight
+- https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData getImageData()
+- https://threejs.org/docs/#Raycaster
+- https://gsap.com/docs/v3/GSAP/ (GSAP)
+- https://gsap.com/docs/v3/GSAP/gsap.to()/
+- https://gsap.com/docs/v3/GSAP/gsap.fromTo()/
+-	https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame requestAnimationFrame()
+-	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin (Math sin for floating) 
+### Events.js: 
+-	https://leafletjs.com/examples/quick-start/
+-	https://leafletjs.com/reference.html
+-	https://www.openstreetmap.org/copyright?
+-	https://leafletjs.com/examples/custom-icons/
+### Contact.html: 
+-	https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport
+-	https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/required
+-	https://lightwidget.com/
+-	https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/rel/noopener
+
+
+## AI Usage: 
+- While working on our project, we found the sources listed above very helpful for solving general problems. However, for more specialized issues, we sometimes used AI to support us during the development process.
+- 3D floating books: Implementing the floating books on the book page was particularly challenging. Although the Three.js library provided a lot of useful information, we also used AI to help us understand and implement certain parts of the functionality, especially the floating animation and positioning of the books.
+- Cursor: The cursor was AI-generated. Instead of using predefined cursor libraries, which were sometimes too complex or extensive for our needs, we used AI to create a simpler custom solution.
+- Debugging and troubleshooting: When buttons, layouts, or other elements did not look or behave as intended, we sometimes pasted our code into an AI tool and asked what could be causing the problem. This was especially useful when we were unsure how to proceed after trying different approaches.
+- Reusing code: We also used AI to help us understand why previously working code sometimes stopped working after being reused or adapted. This helped us identify which parts of the code needed to be changed and what we had to consider when reusing existing code. We learned that simply copy-pasting code does not always work because the surrounding structure, variables, or dependencies can be different.
+- Grid Systems: On the episode page, the cards were not always aligned correctly and sometimes had different heights. There was a similar layout issue on the author page, where elements were initially displayed one after another instead of being arranged as intended. AI helped us understand possible CSS/layout issues and improve the structure.
+- JavaScript: We used AI more frequently for JavaScript because some of the syntax and concepts used in the project were not fully covered or explained in class. AI helped us understand unfamiliar syntax and explain what specific parts of the code were doing, which supported our learning process.
+- Merging: When we encountered problems related to the main branch, we also used AI to help identify and resolve potential issues before merging changes. This helped reduce the risk of conflicts and other problems during the merging process.
+- Limitations of AI: AI solutions were often more complex than necessary and sometimes suggested approaches that did not fit our project. Therefore, we could not always rely on the suggested solution directly. In some cases, we found the actual problem ourselves after examining the code more closely. AI was mainly used as a supporting tool for understanding, debugging, and developing ideas rather than simply copying and pasting complete solutions.
+
+
+## Outlook on Future Projects: 
+
+
+
 
 
 
