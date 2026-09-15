@@ -485,6 +485,11 @@ In general we relied on the pages from our web programming class, the mentioned 
 
 
 ## Outlook on Future Projects: 
+- For future projects, we would plan the structure of the website and the code more carefully before starting to implement everything. Having a clear system for CSS classes, JavaScript files and JSON data from the beginning would prevent some of the problems we had later.
+- We would also start testing the website on different screen sizes much earlier. The problems we had with the smartphone version showed that a design can look good on one screen while not working at all on another. In a future project, we would therefore include mobile testing as part of the development process instead of leaving it until the end.
+- Most importantly, we think next time we would start testing individual features earlier and more often. This would make it easier to notice when something stops working and would hopefully prevent several problems from building up at the same time. 
+- One such issue was adapting to different user systems. For example we tested our website on a Mac with two different browser (Chrome, Firefox). However we realized towards the end that the webiste presented slighlty different on Microsoft devices. 
+- Overall, we felt like this project gave us a much better understanding of the development process, especially how much testing, restructuring and small adjustments are actually part of creating a finished website.
 
 
 
