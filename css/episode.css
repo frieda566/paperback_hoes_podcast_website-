@@ -62,8 +62,8 @@
 }
 
 .card .tags{
-    margin-top: 3px;
-    margin-bottom: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Slightly lifts the card when the mouse hover over it for a subtle interactive effect */
