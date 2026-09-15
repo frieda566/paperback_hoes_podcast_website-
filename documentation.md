@@ -296,3 +296,132 @@ he mentioned that the host container both open when you click on “Show Favouri
 - I updated the documentation to add more sections for feedback and an explanation for the choices we made when designing the pages  
 - I also changed the Dark Mode to switch between Light and Dark not just one mode. 
 
+## 07.09. 
+### Frieda: 
+- I updated the book cards to flip the other way around since I was told that that direction made more sense 
+- I also realized that the host picture for the host rating wasn’t correct so I changed that as well 
+- I tried multiple things to overwrite the lightwidget thing so that it wouldn’t show the upgrade thing anymore but I soon realized that telling the program that as soon as there was an error it should show the placeholder made no sense 
+     - The lightwidget wasn’t throwing an error just mentioning that you need to log in or have a subscription to use it 
+     - I think I will just refrain from using the lightwidget idea and just add a picture of the feed since the name is linked to the instagram page already 
+     - I also added the ratings from rachel to the book_recommendation.json 
+- Again I used “Important!” to ensure that they would actually show 
+
+### Rachel:
+- After taking a break from the author page, I finally figured out what the problem was. This let me finish the author page design. 
+- Additionally, we realized that we had been focusing on the Laptop design and not on a phone design enough. First, we tried a basic script to keep the basics covered. 
+- Then I designed the collages for events and added them to finish off the event page
+
+## 11.09.
+### Frieda: 
+-	I updated the home page and deleted the fourth episode since it still had the german title, and I felt like three episodes looked better than four 
+-	I also updated the event close button since it didn’t match the button-29 I had chosen for the website 
+-	I also added the feed picture since all of the people we had sent the page to couldn’t see the lightwidget application so I decided to just delete it 
+-	I also added the new README since it was still from my web programming assignments  
+### Rachel:
+- I added the add star rating 0-5, (0,5) for books mentioned on card 
+- As well as fix the issue we had been having with formspree when sending messages through the form on the contact page 
+- This meant I could update design for author page by adding the book covers. 
+
+## 13.09.
+### Frieda: 
+- Today I updated the recent episode headline since we decided that adding a button as a headline doesn’t really fit our design. 
+- I also updated the show favourites section and added more space between the buttons. 
+
+### Rachel: 
+- I updated some issues we had with the episode lenght 
+
+## 15.09.
+### Frieda: 
+- Today I changed the buttons button-29 since something had changed the size of the buttons on multiple pages 
+- Furthermore, there were still episode descriptions that were to long for the layout so i just changed the css that there would be an extra free line in case there were less than 3 rows. 
+- Finally, I added the first part of our documentation.
+
+### Rachel: 
+- I added the final part of our documentation to the code
+- Additionally I finished writing our reflection incuding our user feedback 
+- Lastly I fixed an issue we had with the Contact Page apperance 
+
+# Conclusion 
+
+## Division 
+
+### Frieda: 
+- Home Page 
+- Episode page (setup and design cards, iframe (Spotify), search filter) 
+- CSS styling 
+- Book Page 
+- Contact page (setup, instagram widget) 
+- Event page (setup, implementation of leaflet.js, design of the cards) 
+- Dark mode for each page 
+- Documentation 
+
+### Rachel: 
+- Data Collection 
+- Phone Set-Up 
+- CSS Styling 
+- Author Page (setup, implementation, design) 
+- Contact Page (Submissions, E-Mail Contact) 
+- Event Page (Design, individual Event Setup)
+- Episode Page (Episode input)
+- Home Page (Design, setup) 
+- Documentation
+
+## Feedback From User Testing 
+- We conducted user testing throughout the development process to get feedback on the current state of our project.
+- The feedback was helpful for identifying areas that could be improved. By testing different versions of the project and receiving feedback along the way, we were able to make adjustments and improve the user experience step by step.
+- Towards the end of the project, we received very positive feedback, with users commenting that the final result looked very good and visually appealing.
+- Overall, the feedback helped us evaluate our design decisions and gave us additional confirmation that the final result worked well from a user's perspective.
+
+## Explanation of each page 
+### Home Page: 
+- The Home Page was designed to lead the user towards all the different features while giving a first impression.  We found it important to have an introductory text to introduce a little history of the podcast.
+- Additionally, we created a banner, inspired by other book podcast websites for that cozy atmosphere but also to separate that initial impression from further features. 
+- After that we added the author profiles and recent episodes to give a playful overview for the user to get to know the hosts and jump right into the episodes. 
+
+### Episode Page:
+- The episode page gathers the last 20 episodes from the podcast “Paperback Hoes”. We decided that 20 episodes would be sufficient and added a short description and new title since the data we worked with was in german. 
+- Each episode has one or more tags that you can filter them and there is also a search bar for you to manually type in the episode you are looking for. 
+- The interface is simple and adds the Spotify for each episode at the bottom of the card. 
+- The design for the number of the episode is inspired by the filter buttons and tag buttons to ensure that there aren’t to many different designs. 
+
+### Book Page: 
+- The book page has a more interactive layout and starts with the books floating in.
+- Since we used screenshots of books and each picture has different dimensions the books aren’t always the same. 
+- Initially, this bothered us, but it shows that each book is different and during the user testing no one pointed it out. 
+- You can click on each floating book to get more info or generate a random book in case you don’t know what you want to read. 
+- The scroll hint shows that you can scroll even further and here we followed the same idea of the episode page. Just to ensure that for each user there would be a possibility to find out more about books. The random book generator and floating books is more for an overview and people who just want to get inspired and the filter and search bar below that for people who want to look for a concrete book. 
+- In the book grid the hover effect and the arrow show that you can click on these books as well to get more info. Here you will find the book title, author, the tags we associate the books with and the ratings of the hosts. On the random book interface, you find these information's as well and the Spotify episode the book was mentioned in as well. The book grid was too small to add the spotify episodes as well and we felt like this would be to much. 
+
+### Event Page: 
+- The event page shows a map and pins where the hosts have been with their book podcast. 
+- It summarizes the events, the date, the place and a short recap as well as a short overview in the form of a collage. 
+- We decided to keep this page simple since further input defeats the whole purpose of a short overview and we didn’t really know what else would be necessary to add.
+
+### Author Page: 
+- The author page was made to add more background information to a format on the podcast “Behind the Pages”. This format was created to talk to authors about their books and have in-depth discussions. 
+- Therefore, our goal for this page was to offer that same “behind the scenes” aspect as we offer in the episodes. The author profiles offer a first glimpse of more background information on them and their book. 
+- In addition to this we added a feature to display “Rachels Thoughts” and “Laureen’s Thoughts.” This adds to the cozy familiar feeling we wanted the user to have. 
+
+### Contact Page: 
+- Lastly for our contact page we thought it important for the user to have a way of connecting with the hosts. Additionally, it was important that these submissions could be sorted into different categories. From Complaints to Book Recommendations. 
+
+
+## Challenges: 
+- One of the biggest challenges during this project was that small changes could sometimes have a much bigger effect than expected. Especially when working with JavaScript, JSON files and CSS, it was easy to change something on one page and suddenly have a problem somewhere else. 
+- For example, because we reused classes and code for different pages, changing the styling or functionality for one section could also affect another one. This meant that we often had to go back and find out where exactly the problem came from instead of immediately knowing how to fix it.
+- Another challenge was keeping the code organized. Our main CSS file became very long during the project, which made it harder to find specific parts and understand which styles belonged to which page. We eventually started dividing it into smaller CSS files, which made the structure easier to understand. I think this is something we would pay more attention to from the beginning in a future project.
+- The mobile version was also a challenge. We mainly focused on how the website looked on a normal screen while developing it, and only later realized how many things had to be adjusted for a smartphone. To be fair we think of our website as a website that is only used on a computer due to the amount of information. 
+- We also had some difficulties with external features such as the Spotify embeds and the Lightwidget. Some things did not work in the way we expected, and in the case of the Lightwidget, we eventually decided to replace it with a static picture because the actual widget required a login or subscription. This taught us that sometimes it is better to simplify a feature instead of spending too much time trying to force something to work.
+
+
+
+
+
+
+
+
+
+
+
+
+
