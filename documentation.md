@@ -132,4 +132,84 @@ Decide to focus on finishing everything we have started by now.  At end of proce
 
 #### Challenge: 
 - Look of Author Picture, problematic since size of image was not size I wanted it to be  
-- Centre books displayed/text   
+- Centre books displayed/text  
+
+## 24.08. (HTML Error)  
+### Frieda: 
+- Today I finally realized why the book filter function wasn’t showing up  
+- I linked two different .js in that HTML file and each .js directed to the same .json which is why the program got confused  
+
+#### Challenges: 
+- I realized that the page is way to overloaded
+- I also changed the Book Tag mentions since only some of them were written with an uppercasse T 
+    - Inconsistent capitalization in the book tag fields (`tags` vs. `Tags`) caused filter functions to fail for some entries, as JavaScript is case-sensitive. 
+- I also updated the images => we have to be precise when naming an calling them 
+    - It's the smallest problems that lead to the whole code not working 
+
+#### Add On: 
+- Collages for the event page 
+- Add search bar to the book recommendation page 
+
+## 25.08. (Data Update/ Author Page)  
+### Rachel: 
+- Finished adding books/ episodes to json file 
+- Finished code for author page, code updated with new json script2 file, to accommodate different button design  
+
+### Frieda: 
+- I updated the final headlines of the pages so that they are all similar, also had to update the episode page – the cards all had different sizes since the text that describes them weren’t always the same length  
+- Updated the episodes so that the last episode that was released was the first on the page instead of one that was older 
+- I also combined the two events from Leipzig since they were both at the same day 
+
+#### Challenge: 
+- Additionally, the spotify episodes were cut of by the cards and I didn’t like the way it looked:  
+    - ![images](images_documentation/image_25_08.png)
+    - Since these embedded episodes have a predefined size I had to update the cards so that you could see the whole interface => sadly I did this on my way to work so I couldn’t solve this problem yet  
+    - Still had the problem that the change of the button had a weird layout after clicking on “Show Favorites” for the hosts  
+
+## 26.08. (Author page, Documentation) 
+### Rachel: 
+- Finished adding descriptive text for Autor page  
+- Updated documentation outline 
+
+### Frieda: 
+- I started to fix the problem with the spotify player once again  
+- I finally found the problem:The fixed `height` value in the `<iframe>` (compact Spotify mode) didn't match the actual card width; additionally, `overflow:hidden` on the card prevented the player from being fully visible.  
+- Adjusted the rotation radius of the floating books (Three.js) to reveal different perspectives and make the 3D effect (spines/pages) clearly visible. 
+    - AI helped me here to ensure that I would get a promising result 
+    - Attempted to adjust the book filter: Reused the filter logic developed for the episodes, but the visual result was unsatisfactory.  
+    - #### Side effect: 
+    Since the same CSS class (.card-grid) was used for both episodes and books, modifying this class caused the books to suddenly stop displaying altogether. 
+
+#### Feedback: 
+- I asked a friend to try out our page
+    - She told me that she really liked the colour scheme of our page 
+    - She was impressed by the features all pages had and just suggested to improve the book page by changing the books in the filter part of that page 
+
+## 27.08.
+### Frieda: 
+- Because I had problems with the new filter interface for the books I decided to just create a new css file for the book page  
+- I copied most of the aspects from the other css file which has gotten way to long and I will have to divide it anyway  
+- I added the function of flipping the cards and updated the matching .js file so that the page wouldn’t look the way it did before  
+    - Added a flip-card function for the books (clicking a book cover rotates the card using a CSS 3D transform, revealing the title, author, and tags on the back)—including updates to the corresponding `.js` file.
+- I liked this more polished look way more  
+- I also rearranged the layout of the page and got my inspiration once again from the sternberg press page  
+    - I might update it for the books to actually fly in more  
+    - I changed the generate button and added an arrow to signal that you can scroll down since I anticipated that you probably wouldn’t  
+    - I will also have to think of a way to signal that you can click on the books and turn them to get more info  
+- I also realized that Rachel had used the wrong Spotify URL because they didn’t show up on the book page when you generated a random book  
+- I also updated the button logic for the Host part once again since it still didn’t work  
+    - Cause: Missing id="themeBtn" or inconsistent data-name references in the button text (resulted in "Hide undefined").
+
+### Rachel: 
+- The author page was looking boring, so I decided to change the design  
+- However, then I encountered the problem that would last a few days: The page simply wouldn’t format itself properly. 
+- It would always intercut each other, and I couldn’t figure out what the problem was.  
+
+#### Challenge: 
+- Figure out the problem with the author page layout  
+
+## 28.08. 
+### Frieda: 
+- I updated the book interface once again including the layout of floating books and the prevention of overlaps and excessive rotation angles 
+
+
