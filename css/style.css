@@ -19,8 +19,13 @@ a, button, .host-btn, #themeBtn, .button-29,
     cursor: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M4%202%20L4%2020%20L9%2016%20L12%2022%20L15%2020.5%20L12%2014.5%20L18%2014.5%20Z'%20fill='%23c68ab5'%20stroke='white'%20stroke-width='1'/%3E%3C/svg%3E") 4 2, pointer !important;
 }
 
+button::-moz-focus-inner{
+    border: 0;
+    padding: 0;
+}
+
 h1{
-    font-family: 'Great Vibes', 
+    font-family: 'Great Vibes', Georgia, 'Times New Roman', Times, serif 
 }
 
 /* Header layout */
@@ -220,7 +225,6 @@ body.dark-mode .card{
   padding-left: 16px;
   padding-right: 16px;
   margin-right: 12px;
-  min-width: 160px;
   position: relative;
   text-align: left;
   text-decoration: none;
@@ -231,9 +235,11 @@ body.dark-mode .card{
   white-space: nowrap;
   will-change: box-shadow, transform;
   font-size: 18px;
-  grid-column: 2;
 }
 
+#themeBtn{
+    grid-column: 2;
+}
 .button-29:focus {
   box-shadow: #6f5d86 0 0 0 1.5px inset, rgba(111, 93, 134, .3) 0 2px 4px, rgba(111, 93, 134, .25) 0 7px 13px -3px, #6f5d86 0 -3px 0 inset;
 }
