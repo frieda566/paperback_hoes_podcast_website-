@@ -331,6 +331,9 @@ he mentioned that the host container both open when you click on “Show Favouri
 - Today I updated the recent episode headline since we decided that adding a button as a headline doesn’t really fit our design. 
 - I also updated the show favourites section and added more space between the buttons. 
 
+## 14.09. 
+### Frieda: 
+-	Today I added comments in a few files to ensure that it would be a better overview.
 ### Rachel: 
 - I updated some issues we had with the episode lenght 
 
@@ -490,6 +493,7 @@ In general we relied on the pages from our web programming class, the mentioned 
 
 ## Outlook on Future Projects: 
 - For future projects, we would plan the structure of the website and the code more carefully before starting to implement everything. Having a clear system for CSS classes, JavaScript files and JSON data from the beginning would prevent some of the problems we had later.
+- For specific future improvements of our website ideally, the books would interact and overlap in an even more natural and realistic way. However, implementing this properly would probably be beyond our current skill level, especially considering the complexity of the 3D positioning and animations. Nevertheless, we are very proud of the result we achieved, especially considering the challenges we faced while implementing the 3D books and their animations.
 - We would also start testing the website on different screen sizes much earlier. The problems we had with the smartphone version showed that a design can look good on one screen while not working at all on another. In a future project, we would therefore include mobile testing as part of the development process instead of leaving it until the end.
 - Most importantly, we think next time we would start testing individual features earlier and more often. This would make it easier to notice when something stops working and would hopefully prevent several problems from building up at the same time. 
 - One such issue was adapting to different user systems. For example we tested our website on a Mac with two different browser (Chrome, Firefox). However we realized towards the end that the webiste presented slighlty different on Microsoft devices. 
