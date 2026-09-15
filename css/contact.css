@@ -151,7 +151,6 @@
     font-family: Georgia, sans-serif;
     font-size: 1rem;
 }
-.contact-form select option:hover,
 .contact-form select option:checked {
     background: #E8DDF7;
     color: #6f5d86;
