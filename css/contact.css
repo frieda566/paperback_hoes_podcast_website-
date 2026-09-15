@@ -145,3 +145,8 @@
     padding:100px 20px;
     font-style:italic;
 }
+.contact-form select option {
+    background: #F9DCE3;
+    color: #4a4a4a;
+    font-family: Georgia, sans-serif;
+}
