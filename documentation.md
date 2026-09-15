@@ -13,15 +13,15 @@ We are creating a website for the book podcast "Paperback Hoes". Here we will le
 ## (Initial Pitch) (Online) 
 - Basis: From the beginning of the course, we used the assignments to work based on the final work for the website 
 - We gave the first pitch of our project idea using Figma to showcase our future ideas for the website: 
-    - ![images](images_documentation/author_figma.jpg)
+  ![images](images_documentation/author_figma.jpg)
 - The homepage we showed had been created when doing our assignments 
 
 ## 09.07.  (Final Presentation)  
 - We gave our final presentation for our project:  
 -  Beforehand we had already created a mock-up of the book recommendation page and the episode and home page, collecting the essential components we wanted to integrate.  
 - Additionally, we drafted our page ideas with Figma to visualize the ideas in our presentation: 
-     - ![images](images_documentation/episode_figma.jpg)
-     - ![images](images_documentation/events_figma.jpg)
+  ![images](images_documentation/episode_figma.jpg)
+  ![images](images_documentation/events_figma.jpg)
 
 
 ### Feedback: 
