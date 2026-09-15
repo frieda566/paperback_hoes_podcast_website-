@@ -19,7 +19,6 @@
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap:20px;
-    align-items:start;
 }
 
 /* Individual episode card styling */
@@ -40,7 +39,7 @@
     min-width:300px;
     max-width:100%;
     display:block;
-    margin-top:15px;
+    margin-top:auto;
     border:none;
     border-radius:12px;
 }
@@ -59,6 +58,12 @@
     -webkit-box-orient:vertical;
     overflow:hidden;
     text-overflow:ellipsis;
+    min-height: calc(3*1.6em)
+}
+
+.card .tags{
+    margin-top: 3px;
+    margin-bottom: 8px;
 }
 
 /* Slightly lifts the card when the mouse hover over it for a subtle interactive effect */
